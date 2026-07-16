@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>干锅鸡翅 · 手机菜谱</title>
+<style>
+  :root{
+    --bg:#fbf7f4; --card:#ffffff; --ink:#211a16; --sub:#7a6a5e;
+    --accent:#c0392b; --accent2:#fdecea; --line:#f0e2da; --warn:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#c0392b,#e05a3f);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(192,57,43,.25);
+  }
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px; font-size:22px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px;}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  label.chk{display:flex; align-items:center; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:16px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#fdecea}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; accent-color:var(--accent);}
+  label.chk.done{background:#fdecea; border-color:#f3c4bc}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .ref{font-size:15px; line-height:1.7}
+  .ref .row{display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line);}
+  .ref .row:last-child{border-bottom:none}
+  .ref .k{color:var(--sub); flex:0 0 70px; font-size:14px;}
+  .cue{font-size:14px; color:var(--ink); margin:3px 0; padding-left:14px; position:relative;}
+  .cue:before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px;
+    background:var(--accent); border-radius:50%;}
+  .warn{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px;}
+  .warn b{color:var(--accent)}
+  .record input[type=text],.record input[type=number],.record textarea{
+    width:100%; border:1px solid var(--line); border-radius:9px; padding:10px;
+    font-size:16px; margin:4px 0 10px; font-family:inherit;}
+  .record label{font-size:14px; color:var(--sub); display:block}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🍗</div>
+    <h1>干锅鸡翅 · 手机菜谱</h1>
+    <div class="meta">2026-07-16（周四）· 两人份</div>
+    <div>
+      <span class="pill">🌶️ 辣</span>
+      <span class="pill">⏱️ 30–60 分</span>
+      <span class="pill">🍚 很下饭</span>
+    </div>
+  </header>
+
+  <div class="note">
+    🔥 鸡翅煎出焦脆皮，配土豆 / 青椒 / 洋葱，干辣椒花椒郫县豆瓣爆香干炒——香辣干香不腻，下饭神器。
+  </div>
+
+  <!-- 采购 -->
+  <div class="card">
+    <h2><span class="num">🛒</span>采购清单（超市对着勾）</h2>
+    <label class="chk"><input type="checkbox"><span>鸡翅中 10–12 个（≈450–500g 生重，两人蛋白线）</span></label>
+    <label class="chk"><input type="checkbox"><span>土豆 1–2 个（≈200g）</span></label>
+    <label class="chk"><input type="checkbox"><span>青椒 1 个（去籽减辣）</span></label>
+    <label class="chk"><input type="checkbox"><span>洋葱 1/2 个</span></label>
+    <label class="chk"><input type="checkbox"><span>蒜 3–4 瓣、姜 1 小块、葱 1–2 根</span></label>
+    <label class="chk"><input type="checkbox"><span>料酒 1 大勺（或白葡萄酒去腥）</span></label>
+    <div class="desc">家里已有：干辣椒、花椒、郫县豆瓣、生抽、蚝油、糖、白芝麻、油、盐。</div>
+  </div>
+
+  <!-- 食材 -->
+  <div class="card">
+    <h2><span class="num">🥬</span>食材（两人份）</h2>
+    <div class="ref">
+      <div class="row"><div class="k">主菜</div><div>鸡翅中 10–12 个（两面划刀，盐+料酒腌 10–15 分钟）</div></div>
+      <div class="row"><div class="k">配菜</div><div>土豆切片 / 青椒切块 / 洋葱切块（汁水吊起锅底 fond、平衡咸）</div></div>
+      <div class="row"><div class="k">底料</div><div>干辣椒 6–8 掰碎、花椒 1 小勺、蒜姜切片、郫县豆瓣 1 大勺</div></div>
+      <div class="row"><div class="k">调味</div><div>生抽 1 大勺、蚝油 1 小勺、糖 1/2 小勺、白芝麻、葱花、油、盐</div></div>
+    </div>
+  </div>
+
+  <!-- 做法 -->
+  <div class="card">
+    <h2><span class="num">👨‍🍳</span>做法（边做边打勾）</h2>
+    <label class="chk"><input type="checkbox"><span><b>鸡翅处理：</b>洗净擦干，两面各划两刀，盐 + 料酒（或白葡萄酒）腌 10–15 分钟</span></label>
+    <label class="chk"><input type="checkbox"><span><b>煎鸡翅（脆皮是魂）：</b>油中火，皮朝下煎 3–4 分钟至金黄焦脆，翻面 2–3 分钟，盛出</span></label>
+    <label class="chk"><input type="checkbox"><span><b>土豆预处理：</b>切片焯水 2–3 分钟（或煎至微焦）盛出，干锅不易夹生</span></label>
+    <label class="chk"><input type="checkbox"><span><b>爆香底料：</b>底油小火，花椒 + 干辣椒慢焙出香（别糊）；下姜蒜炒香；加郫县豆瓣小火炒出红油 30–60 秒</span></label>
+    <label class="chk"><input type="checkbox"><span><b>合炒：</b>下洋葱、青椒、土豆片炒匀（洋葱汁吊起锅底 fond）；倒回鸡翅，加生抽 + 蚝油 + 糖，中火翻炒 2–3 分钟</span></label>
+    <label class="chk"><input type="checkbox"><span><b>收汁出锅：</b>汤汁收紧裹匀，撒白芝麻 + 葱花，关火</span></label>
+  </div>
+
+  <!-- 关键提醒 -->
+  <div class="card">
+    <h2><span class="num">🔑</span>关键别翻车</h2>
+    <div class="warn">
+      • <b>鸡翅皮要脆</b>：擦干 + 热油 + 皮朝下别急着翻（煎够 3–4 分钟再翻）。<br>
+      • <b>花椒干辣椒小火冷油慢焙</b>，闻到香就下豆瓣；辣椒一糊整道发苦。<br>
+      • <b>郫县豆瓣本身咸</b>，生抽适量，盐最后尝了再加。<br>
+      • <b>土豆提前焯水 / 煎</b>，否则干锅里夹生。<br>
+      • 配菜可换：藕片（toko）/ 芹菜 / 年糕；不想要土豆就省。<br>
+      • 辣度：干辣椒去籽减半；花椒量按喜好。
+    </div>
+  </div>
+
+  <!-- 搭配 -->
+  <div class="card">
+    <h2><span class="num">🍽️</span>搭配</h2>
+    <div class="ref">
+      <div class="row"><div class="k">主食</div><div>米饭（很下饭，必配）</div></div>
+      <div class="row"><div class="k">凉菜</div><div>拍黄瓜 / 番茄沙拉解辣</div></div>
+      <div class="row"><div class="k">饮品</div><div>冰啤酒 / 绿茶</div></div>
+    </div>
+  </div>
+
+  <!-- 记录 -->
+  <div class="card record">
+    <h2><span class="num">✓</span>今日反馈</h2>
+    <label>日期</label>
+    <input type="text" value="2026-07-16" placeholder="YYYY-MM-DD">
+    <label>咸淡</label>
+    <input type="text" placeholder="偏咸 / 刚好 / 偏淡">
+    <label>鸡翅皮</label>
+    <input type="text" placeholder="脆 / 还行 / 不脆">
+    <label>辣度</label>
+    <input type="text" placeholder="太辣 / 刚好 / 不够">
+    <label>备注</label>
+    <textarea rows="2" placeholder="下次想改的点"></textarea>
+    <button id="copyBtn" class="btn">📋 复制今日反馈</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置</button>
+    <div id="saveStatus" class="save"></div>
+  </div>
+
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要反馈用「复制今日反馈」存到别处。</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input, .record textarea'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = {
+      checks: checks.map(function(c){ return c.checked; }),
+      rec: recInputs.map(function(i){ return i.value; }),
+      at: Date.now()
+    };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){
+      statusEl.textContent = '（此环境无法保存，刷新会丢失）';
+    }
+  }
+
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      if(data.rec){
+        data.rec.forEach(function(v, i){ if(recInputs[i]){ recInputs[i].value = v; } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
+  });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var lines = [];
+    lines.push(document.querySelector('header h1').textContent.trim() + ' · ' + (recInputs[0] ? recInputs[0].value : ''));
+    var done = [], undone = [];
+    checks.forEach(function(c){
+      var txt = c.closest('label.chk').querySelector('span').textContent.replace(/\s+/g,' ').trim();
+      (c.checked ? done : undone).push(txt);
+    });
+    lines.push('步骤完成（' + done.length + '/' + checks.length + '）');
+    var extra = [];
+    if(recInputs[1] && recInputs[1].value) extra.push('咸淡：' + recInputs[1].value);
+    if(recInputs[2] && recInputs[2].value) extra.push('鸡翅皮：' + recInputs[2].value);
+    if(recInputs[3] && recInputs[3].value) extra.push('辣度：' + recInputs[3].value);
+    if(recInputs[4] && recInputs[4].value) extra.push('备注：' + recInputs[4].value);
+    if(extra.length){ lines.push('反馈：'); extra.forEach(function(e){ lines.push('  ' + e); }); }
+    copyText(lines.join('\n'));
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    recInputs.forEach(function(i){ i.value = i.defaultValue || ''; });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ statusEl.textContent = '已复制到剪贴板'; },
+        function(){ fallbackCopy(text); }
+      );
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    window.prompt('复制下面内容：', text);
+  }
+
+  restore();
+})();
+</script>
+</body>
+</html>
