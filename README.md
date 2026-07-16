@@ -1,4 +1,4 @@
-# training-web
+# publicpages
 
 个人训练网页托管仓库（**公开**）。用于存放可在手机浏览器直接打开的交互式 HTML：训练计划、打卡页、动作参考等。
 
@@ -8,9 +8,9 @@
 两种方式，**任选其一**：
 
 1. **即时预览（无需任何设置）** — 手机浏览器直接打开：
-   `https://htmlpreview.github.io/?https://github.com/rouroulaile/training-web/blob/main/<文件名>.html`
+   `https://htmlpreview.github.io/?https://github.com/rouroulaile/publicpages/blob/main/<文件名>.html`
 2. **开启 GitHub Pages 后（一次性设置，URL 更干净）** — 仓库 `Settings → Pages → Source: Deploy from a branch → main / (root)`，然后访问：
-   `https://rouroulaile.github.io/training-web/<文件名>.html`
+   `https://rouroulaile.github.io/publicpages/<文件名>.html`
    可"添加到主屏幕"当 App 用。
 
 ## 页面列表
