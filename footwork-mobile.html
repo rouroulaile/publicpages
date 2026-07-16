@@ -61,6 +61,11 @@
   .record label{font-size:14px; color:var(--sub); display:block}
   .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
   .big{font-size:15px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
 </style>
 </head>
 <body>
@@ -197,18 +202,105 @@
     <input type="text" placeholder="写今天最该改的一点">
     <label>次日足底反应（0–10）</label>
     <input type="number" placeholder="0 = 无">
+    <button id="copyBtn" class="btn">📋 复制今日记录</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置今日</button>
+    <div id="saveStatus" class="save"></div>
   </div>
 
-  <div class="footer">复制到手机笔记 / 用浏览器打开本文件即可离线使用 · 数据不联网</div>
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要记录用「复制今日记录」存到笔记。</div>
 
 </div>
 
 <script>
-  document.querySelectorAll('label.chk input').forEach(function(el){
-    el.addEventListener('change', function(){
-      el.closest('label.chk').classList.toggle('done', el.checked);
-    });
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = {
+      checks: checks.map(function(c){ return c.checked; }),
+      rec: recInputs.map(function(i){ return i.value; }),
+      at: Date.now()
+    };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){
+      statusEl.textContent = '（此环境无法保存，刷新会丢失）';
+    }
+  }
+
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      if(data.rec){
+        data.rec.forEach(function(v, i){ if(recInputs[i]){ recInputs[i].value = v; } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
   });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var done = [], undone = [];
+    checks.forEach(function(c){
+      var txt = c.closest('label.chk').querySelector('span').textContent.trim();
+      (c.checked ? done : undone).push(txt);
+    });
+    var lines = [];
+    lines.push(document.querySelector('header h1').textContent.trim() + ' · ' + (recInputs[0] ? recInputs[0].value : ''));
+    lines.push('完成（' + done.length + '/' + checks.length + '）：');
+    done.forEach(function(t){ lines.push('  ✅ ' + t); });
+    if(undone.length){ lines.push('未完成：'); undone.forEach(function(t){ lines.push('  ⬜ ' + t); }); }
+    var extra = [];
+    if(recInputs[1] && recInputs[1].value) extra.push('版本：' + recInputs[1].value);
+    if(recInputs[2] && recInputs[2].value) extra.push('最顺：' + recInputs[2].value);
+    if(recInputs[3] && recInputs[3].value) extra.push('失误：' + recInputs[3].value);
+    if(recInputs[4] && recInputs[4].value) extra.push('次日足底：' + recInputs[4].value + '/10');
+    if(extra.length){ lines.push(''); extra.forEach(function(e){ lines.push(e); }); }
+    copyText(lines.join('\n'));
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    recInputs.forEach(function(i){ i.value = i.defaultValue || ''; });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ statusEl.textContent = '已复制到剪贴板，去笔记里粘贴'; },
+        function(){ fallbackCopy(text); }
+      );
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    window.prompt('复制下面内容到你的笔记：', text);
+  }
+
+  restore();
+})();
 </script>
 </body>
 </html>
