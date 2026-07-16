@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>步伐练习 · 手机版</title>
+<style>
+  :root{
+    --bg:#f2f3f5; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#1f7a4d; --accent2:#e8f3ee; --line:#e6e8eb; --warn:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#1f7a4d,#2f9e63);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(31,122,77,.25);
+  }
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px; font-size:22px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px;}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .sets{display:flex; flex-wrap:wrap; gap:7px; margin:8px 0 4px;}
+  .badge{background:var(--accent2); color:var(--accent); border-radius:8px;
+    padding:4px 9px; font-size:13px; font-weight:600;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  .cue{font-size:14px; color:var(--ink); margin:3px 0; padding-left:14px; position:relative;}
+  .cue:before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px;
+    background:var(--accent); border-radius:50%;}
+  label.chk{display:flex; align-items:center; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:16px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#eef6f1}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; accent-color:var(--accent);}
+  label.chk.done{background:#eaf5ef; border-color:#bfe3cf}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .rest{font-size:13px; color:var(--warn); margin-top:2px; padding-left:4px}
+  .ref{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .ref h3{margin:0 0 8px; font-size:16px}
+  .ref table{width:100%; border-collapse:collapse; font-size:14px}
+  .ref td{padding:5px 6px; border-bottom:1px solid var(--line)}
+  .ref td:first-child{color:var(--sub); white-space:nowrap}
+  .record input[type=text],.record input[type=number]{
+    width:100%; border:1px solid var(--line); border-radius:9px; padding:10px;
+    font-size:16px; margin:4px 0 10px; font-family:inherit;}
+  .record label{font-size:14px; color:var(--sub); display:block}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .big{font-size:15px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🎾</div>
+    <h1>步伐练习 · 手机版</h1>
+    <div class="meta">2026-07-16（周四）· 30–35 分钟完整版</div>
+    <div>
+      <span class="pill">RPE 5–7</span>
+      <span class="pill">带球拍完成</span>
+      <span class="pill">不追速度</span>
+    </div>
+  </header>
+
+  <div class="note">
+    🛡️ 右肩 7/15 不适恢复期：本计划低负荷，不加重肩。动作乱 / 视线乱 / 接球僵 / 足底或跟腱不舒服，立即降速或减组；次日足底痛 &gt; 2/10，下次训练量减半。
+  </div>
+
+  <!-- 快速参考 -->
+  <div class="ref">
+    <h3>📏 现场快速参考</h3>
+    <table>
+      <tr><td>距离换算</td><td>1 拍≈0.7 米；2米≈3拍，3米≈4–4.5拍</td></tr>
+      <tr><td>器材</td><td>标志物 4–6、网球 1–2、球拍、秒表；最好在球场</td></tr>
+      <tr><td>带拍规则</td><td>步法主体全部带拍；抛接热身不用拍，甜区颠球用拍</td></tr>
+      <tr><td>计数</td><td>3×20秒=3组，每组20秒内做高质量轮次；20秒做2轮左右正常</td></tr>
+      <tr><td>红线</td><td>忘 split / 没回中 / 急停不稳 / 重心太高 / 为追速度省动作</td></tr>
+    </table>
+  </div>
+
+  <!-- 1 热身 -->
+  <div class="card">
+    <h2><span class="num">1</span>到场合并热身（10–12 分钟）</h2>
+    <div class="desc">手眼协调在前，做完直接进步法，不拆三套。完整版做满全部 8 项。</div>
+    <label class="chk"><input type="checkbox"><span>小跑 / 小碎步　1 分钟</span></label>
+    <label class="chk"><input type="checkbox"><span>小碎步 + split　30秒 ×2</span></label>
+    <label class="chk"><input type="checkbox"><span>单球左右手抛接　30秒 ×1–2（太简单就只做30秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>高抛换手接　30秒 ×2（默认1球；2球是进阶）</span></label>
+    <label class="chk"><input type="checkbox"><span>小碎步中抛接　30秒 ×2（单球太简单时重点做）</span></label>
+    <label class="chk"><input type="checkbox"><span>墙壁反弹接球　30秒 ×3</span></label>
+    <label class="chk"><input type="checkbox"><span>Split + 墙壁反弹接球　30秒 ×2–3</span></label>
+    <label class="chk"><input type="checkbox"><span>球拍甜区颠球　30秒 ×2–3</span></label>
+    <div class="rest">没有墙：跳过墙壁项，用甜区颠球或小碎步抛接补时间。</div>
+  </div>
+
+  <!-- 2 弹性激活 -->
+  <div class="card">
+    <h2><span class="num">2</span>弹性 / 反应性激活（2–3 分钟）</h2>
+    <div class="desc">把力量训练的腿臀力量「转译」成小碎步和分腿垫步需要的快速弹性。接触地面越短、落地越轻越好，不追高度次数。</div>
+    <div class="cue">跟腱 / 小腿 / 足底次日 &gt; 2/10 则减半或暂停</div>
+    <div class="cue">落地变重、变响就停，说明已疲劳</div>
+    <label class="chk"><input type="checkbox"><span>Pogo 小跳（踝主导，轻快弹）　2 × 10</span></label>
+    <label class="chk"><input type="checkbox"><span>分腿垫步跳（落地即向任一侧蹬出1步）　2 × 6</span></label>
+  </div>
+
+  <!-- 3 四方向启动 -->
+  <div class="card">
+    <h2><span class="num">3</span>四方向启动</h2>
+    <div class="sets"><span class="badge">4 × 20 秒</span><span class="badge">休 40 秒</span></div>
+    <div class="desc">中心放前后左右4点（约3拍，第一次用2拍）。按 前→回中→右→回中→后→回中→左→回中 循环。</div>
+    <div class="cue">每次启动先 split；到点先稳住；脚先到，手再处理</div>
+    <div class="cue">后点转髋侧身，用交叉后撤步，不正面倒退</div>
+    <label class="chk"><input type="checkbox"><span>第 1 组（20秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 2 组（20秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 3 组（20秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 4 组（20秒）</span></label>
+  </div>
+
+  <!-- 4 横向移动 + 急停 -->
+  <div class="card">
+    <h2><span class="num">4</span>横向移动 + 急停</h2>
+    <div class="sets"><span class="badge">4 × 25 秒</span><span class="badge">休 45 秒</span></div>
+    <div class="desc">左/中/右三点（约4拍，乱就缩到3拍）。远距先交叉步/跑动步吃距离，最后1–2小步刹车。</div>
+    <div class="cue">右脚先向右打开；回中别一路并步拖回，先用交叉/跑动回中再 split</div>
+    <label class="chk"><input type="checkbox"><span>第 1 组（25秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 2 组（25秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 3 组（25秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 4 组（25秒）</span></label>
+  </div>
+
+  <!-- 5 宽球击球 + 交叉步回位 -->
+  <div class="card">
+    <h2><span class="num">5</span>宽球击球 + 交叉步回位</h2>
+    <div class="sets"><span class="badge">3 × 30 秒</span><span class="badge">休 60 秒</span></div>
+    <div class="desc">继续用左/中/右三点（约4拍，乱就缩到3拍）。主菜是回位，不是去球速度。</div>
+    <div class="cue">去球按真实宽球处理：打开第一步，远距先交叉/跑动，最后小步调整到击球点</div>
+    <div class="cue">击球后外侧脚蹬地，马上交叉步回中；身体尽量还能看见球场，不要完全背过去</div>
+    <label class="chk"><input type="checkbox"><span>第 1 组（30秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 2 组（30秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 3 组（30秒）</span></label>
+  </div>
+
+  <!-- 6 浅球上网组合 -->
+  <div class="card">
+    <h2><span class="num">6</span>浅球上网组合</h2>
+    <div class="sets"><span class="badge">3 组 × 4–6 次</span><span class="badge">休 75 秒</span></div>
+    <div class="desc">底线中心→短球点（约5–6拍）→approach→上网 split→截击点→（若挑高球）交叉后撤回高压点。</div>
+    <div class="cue">最后2–3步变小刹车；approach 后继续向前压；后撤 overhead 不正面倒退</div>
+    <label class="chk"><input type="checkbox"><span>第 1 组（正手2–3 + 反手2–3）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 2 组（正手2–3 + 反手2–3）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 3 组（正手2–3 + 反手2–3）</span></label>
+  </div>
+
+  <!-- 7 网前三点小步 -->
+  <div class="card">
+    <h2><span class="num">7</span>网前三点小步</h2>
+    <div class="sets"><span class="badge">3 × 20 秒</span><span class="badge">休 40 秒</span></div>
+    <div class="desc">网前中/正手截击/中路低截击/反手截击三点（约2拍）。小碎步调整，不大跨步扑球。</div>
+    <div class="cue">拍头始终在身前；重心低；截击后小步回中重新 split</div>
+    <label class="chk"><input type="checkbox"><span>第 1 组（20秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 2 组（20秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>第 3 组（20秒）</span></label>
+  </div>
+
+  <!-- 8 收尾 -->
+  <div class="card">
+    <h2><span class="num">8</span>收尾放松（3 分钟）</h2>
+    <label class="chk"><input type="checkbox"><span>小腿拉伸　每侧 30 秒</span></label>
+    <label class="chk"><input type="checkbox"><span>足底踩球　每脚 1 分钟</span></label>
+  </div>
+
+  <!-- 记录 -->
+  <div class="card record">
+    <h2><span class="num">✓</span>今日记录</h2>
+    <label>日期</label>
+    <input type="text" value="2026-07-16" placeholder="YYYY-MM-DD">
+    <label>做了哪版</label>
+    <input type="text" value="30–35 分钟完整版" placeholder="20 / 30–35 分钟">
+    <label>最顺的动作</label>
+    <input type="text" placeholder="例如：宽球交叉步回位">
+    <label>质量失误（忘 split / 没回中 / 急停不稳…）</label>
+    <input type="text" placeholder="写今天最该改的一点">
+    <label>次日足底反应（0–10）</label>
+    <input type="number" placeholder="0 = 无">
+  </div>
+
+  <div class="footer">复制到手机笔记 / 用浏览器打开本文件即可离线使用 · 数据不联网</div>
+
+</div>
+
+<script>
+  document.querySelectorAll('label.chk input').forEach(function(el){
+    el.addEventListener('change', function(){
+      el.closest('label.chk').classList.toggle('done', el.checked);
+    });
+  });
+</script>
+</body>
+</html>
