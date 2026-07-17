@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>今晚菜单 · 啤酒苹果炖梅花肉</title>
+<style>
+  :root{
+    --bg:#f2f3f5; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#1f7a4d; --accent2:#e8f3ee; --line:#e6e8eb; --warn:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#1f7a4d,#2f9e63);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(31,122,77,.25);
+  }
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px; font-size:21px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px;}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; min-width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  label.chk{display:flex; align-items:flex-start; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:15.5px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#eef6f1}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; margin-top:1px; accent-color:var(--accent);}
+  label.chk.done{background:#eaf5ef; border-color:#bfe3cf}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .ref{font-size:15px; line-height:1.7}
+  .ref .row{display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line);}
+  .ref .row:last-child{border-bottom:none}
+  .ref .k{color:var(--sub); flex:0 0 64px; font-size:14px;}
+  .warn{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; line-height:1.7;}
+  .warn b{color:var(--accent)}
+  .record input[type=text],.record input[type=number],.record textarea{
+    width:100%; border:1px solid var(--line); border-radius:9px; padding:10px;
+    font-size:16px; margin:4px 0 10px; font-family:inherit;}
+  .record label{font-size:14px; color:var(--sub); display:block}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🍺</div>
+    <h1>今晚菜单 · 啤酒苹果炖梅花肉</h1>
+    <div class="meta">2026-07-17 周五 · 两人份 · 19:30 开饭</div>
+    <div>
+      <span class="pill">🐖 猪</span>
+      <span class="pill">🥚 蛋</span>
+      <span class="pill">🥬 素</span>
+      <span class="pill">⏱️ 约 60 分</span>
+    </div>
+  </header>
+
+  <div class="note">
+    🔥 <b>两个灶眼同时用</b>：灶眼 A 全程炖啤酒肉，灶眼 B 做蒸蛋/肉末/菠菜。若只有一个灶眼，把「蒸蛋+肉末」整体挪到啤酒肉出锅后再做（会稍凉，可接受）。
+  </div>
+
+  <!-- 采购 -->
+  <div class="card">
+    <h2><span class="num">🛒</span>采购清单（超市对着勾）</h2>
+    <label class="chk"><input type="checkbox"><span>苹果 1 个（Gala / Jonagold，炖肉用）</span></label>
+    <label class="chk"><input type="checkbox"><span>啤酒 1 罐（淡 lager，Hertog Jan / Bavaria；<b>别买 IPA</b>）</span></label>
+    <label class="chk"><input type="checkbox"><span>洋葱 ½ 个</span></label>
+    <label class="chk"><input type="checkbox"><span>蒜 1 头（三道菜都用）</span></label>
+    <label class="chk"><input type="checkbox"><span>姜 1 小块</span></label>
+    <label class="chk"><input type="checkbox"><span>菠菜 300–400g（spinazie 鲜装）</span></label>
+    <label class="chk"><input type="checkbox"><span>鸡蛋 3 个</span></label>
+    <label class="chk"><input type="checkbox"><span>猪肉末 150g（gehakt）</span></label>
+    <label class="chk"><input type="checkbox"><span>葱 1–2 根</span></label>
+    <label class="chk"><input type="checkbox"><span>西式香料：月桂叶 1 片 + 百里香 1 小撮；第戎芥末（已有）</span></label>
+    <div class="desc">家里已有：橄榄油 / 葵花油、盐、黑 / 白胡椒、酱油、蚝油、淀粉、糖。梅花肉 300g 是 07-14 冷藏剩肉，今做第 3 天（安全线内）。</div>
+  </div>
+
+  <!-- 时钟时间表 -->
+  <div class="card">
+    <h2><span class="num">⏰</span>时钟时间表（边做边勾）</h2>
+    <div class="desc">想提前开做，把下面所有时间整体前移即可。</div>
+
+    <label class="chk"><input type="checkbox"><span><b>18:20 备料：</b>梅花肉切 3cm 块擦干；苹果去皮去核切块<b>分两份</b>；洋葱切块；蒜切片（啤酒肉）+ 另切蒜末（菠菜/肉末）；姜切片；菠菜切段；葱切花；鸡蛋打碗。⚠️ 梅花肉做前闻一下，异味/黏滑弃</span></label>
+
+    <label class="chk"><input type="checkbox"><span><b>18:35 啤酒肉上锅</b>（灶眼 A）：梅花肉皮/肥面朝下煎焦黄（煎出 fond）；原锅下洋葱蒜姜炒软；加啤酒煮开撇沫挥发 1–2 分钟；+ 月桂+百里香+黑胡椒+<b>一半苹果</b>，小火炖 35 分钟</span></label>
+
+    <label class="chk"><input type="checkbox"><span><b>18:43–19:18 炖肉中</b>（hands-off，去歇着）；期间用灶眼 B 做下面两步</span></label>
+
+    <label class="chk"><input type="checkbox"><span><b>19:00 肉末蒸蛋</b>（灶眼 B）：蛋+盐+几滴生抽+<b>温水 1.5 倍</b>过筛，盖保鲜膜扎孔，中小火蒸 10–12 分钟，关火焖 2；另锅肉末（生抽+白胡椒+淀粉+油抓匀，热油蒜末爆香，炒熟+生抽+糖）浇蒸蛋撒葱花</span></label>
+
+    <label class="chk"><input type="checkbox"><span><b>19:18 啤酒肉收尾</b>（灶眼 A）：下<b>另一半苹果</b>+第戎芥末搅匀，补盐（偏酸加极少许糖），中火收汁至浓稠裹肉出锅</span></label>
+
+    <label class="chk"><input type="checkbox"><span><b>19:25 蒜蓉菠菜</b>（灶眼 B）：水开加油盐，菠菜焯 15–20 秒过凉<b>挤干</b>；2/3 蒜末小火爆香，下菠菜快炒 30 秒–1 分钟，加盐+蚝油+白胡椒；关火前下剩余蒜末</span></label>
+
+    <label class="chk"><input type="checkbox"><span><b>19:30 上桌 🍽️</b>：啤酒苹果炖梅花肉 + 肉末蒸蛋 + 蒜蓉菠菜 + 米饭；饮品同款冰啤酒 / 绿茶</span></label>
+  </div>
+
+  <!-- 关键别翻车 -->
+  <div class="card">
+    <h2><span class="num">🔑</span>关键别翻车</h2>
+    <div class="warn">
+      • <b>啤酒选淡 lager</b>，煮开去酒精；<b>别加生抽</b>（法式 carbonade，咸鲜靠盐+洋葱，提香用第戎芥末）。<br>
+      • <b>苹果分两次下</b>：炖煮那半出甜味嫩肉，收尾那半保口感清香。<br>
+      • <b>梅花肉带脂肪才嫩</b>，别换纯瘦肉（会柴）。<br>
+      • <b>蒸蛋</b>温水 1.5 倍+过筛+小火加盖，刚凝固就关火；肉末单独炒香再浇，蛋更嫩。<br>
+      • <b>菠菜必焯水去草酸挤干</b>，否则出水变汤；蒜末小火别糊。
+    </div>
+  </div>
+
+  <!-- 搭配 -->
+  <div class="card">
+    <h2><span class="num">🍽️</span>搭配</h2>
+    <div class="ref">
+      <div class="row"><div class="k">主食</div><div>米饭（很下饭，必配）</div></div>
+      <div class="row"><div class="k">解腻</div><div>蒜蓉菠菜（已含）</div></div>
+      <div class="row"><div class="k">饮品</div><div>同款冰啤酒 / 绿茶</div></div>
+    </div>
+  </div>
+
+  <!-- 反馈 -->
+  <div class="card record">
+    <h2><span class="num">✓</span>今日反馈</h2>
+    <label>日期</label>
+    <input type="text" value="2026-07-17" placeholder="YYYY-MM-DD">
+    <label>啤酒肉酒香果味</label>
+    <input type="text" placeholder="够 / 偏淡 / 偏苦">
+    <label>蒸蛋嫩度</label>
+    <input type="text" placeholder="嫩 / 刚好 / 老">
+    <label>咸淡</label>
+    <input type="text" placeholder="偏咸 / 刚好 / 偏淡">
+    <label>备注</label>
+    <textarea rows="2" placeholder="下次想改的点"></textarea>
+    <button id="copyBtn" class="btn">📋 复制今日反馈</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置</button>
+    <div id="saveStatus" class="save"></div>
+  </div>
+
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要反馈用「复制今日反馈」存到别处。</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input, .record textarea'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = {
+      checks: checks.map(function(c){ return c.checked; }),
+      rec: recInputs.map(function(i){ return i.value; }),
+      at: Date.now()
+    };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){
+      statusEl.textContent = '（此环境无法保存，刷新会丢失）';
+    }
+  }
+
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      if(data.rec){
+        data.rec.forEach(function(v, i){ if(recInputs[i]){ recInputs[i].value = v; } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
+  });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var lines = [];
+    lines.push(document.querySelector('header h1').textContent.trim() + ' · ' + (recInputs[0] ? recInputs[0].value : ''));
+    var done = 0;
+    checks.forEach(function(c){ if(c.checked) done++; });
+    lines.push('步骤完成（' + done + '/' + checks.length + '）');
+    var extra = [];
+    if(recInputs[1] && recInputs[1].value) extra.push('啤酒肉酒香果味：' + recInputs[1].value);
+    if(recInputs[2] && recInputs[2].value) extra.push('蒸蛋嫩度：' + recInputs[2].value);
+    if(recInputs[3] && recInputs[3].value) extra.push('咸淡：' + recInputs[3].value);
+    if(recInputs[4] && recInputs[4].value) extra.push('备注：' + recInputs[4].value);
+    if(extra.length){ lines.push('反馈：'); extra.forEach(function(e){ lines.push('  ' + e); }); }
+    copyText(lines.join('\n'));
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    recInputs.forEach(function(i){ i.value = i.defaultValue || ''; });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ statusEl.textContent = '已复制到剪贴板，去笔记里粘贴'; },
+        function(){ fallbackCopy(text); }
+      );
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    window.prompt('复制下面内容到你的笔记：', text);
+  }
+
+  restore();
+})();
+</script>
+</body>
+</html>
