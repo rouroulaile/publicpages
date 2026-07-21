@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>今晚菜单 · 周三海鲜局</title>
+<style>
+  :root{
+    --bg:#f5f2f1; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#c0392b; --accent2:#fbeae7; --line:#ecdedb; --warn:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#c0392b,#e05a45);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(192,57,43,.25);
+  }
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px; font-size:21px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px; line-height:1.7;}
+  .note b{color:var(--accent)}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; min-width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  label.chk{display:flex; align-items:flex-start; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:15.5px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#fbeae7}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; margin-top:1px; accent-color:var(--accent);}
+  label.chk.done{background:#fbeae7; border-color:#f0c8c1}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .time{display:inline-block; background:var(--accent2); color:var(--accent); border-radius:8px;
+    padding:1px 8px; font-size:13.5px; font-weight:700; margin-right:6px;}
+  .ref{font-size:15px; line-height:1.7}
+  .ref .row{display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line);}
+  .ref .row:last-child{border-bottom:none}
+  .ref .k{color:var(--sub); flex:0 0 76px; font-size:14px;}
+  .warn{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; line-height:1.75;}
+  .warn b{color:var(--accent)}
+  .record input[type=text],.record input[type=number],.record textarea{
+    width:100%; border:1px solid var(--line); border-radius:9px; padding:10px;
+    font-size:16px; margin:4px 0 10px; font-family:inherit;}
+  .record label{font-size:14px; color:var(--sub); display:block}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🦐</div>
+    <h1>今晚菜单 · 周三海鲜局</h1>
+    <div class="meta">2026-07-22 周三 · 两人份 · 18:30–18:40 开饭</div>
+    <div>
+      <span class="pill">🦐 白酒青口贝</span>
+      <span class="pill">🌶️ 椒盐虾仁</span>
+      <span class="pill">🥔 蒜香薯角</span>
+      <span class="pill">🍚 米饭</span>
+    </div>
+  </header>
+
+  <div class="note">
+    🔥 <b>四路并行</b>：电饭煲煮饭 · 空气炸锅烤薯角 · 灶眼 A 焖青口 · 灶眼 B 煎虾仁。真正手忙只有 18:22–18:40 那段，其余都不用管。<b>青口最后做最新鲜，薯角趁热蘸青口汤。</b>
+  </div>
+
+  <!-- 采购 -->
+  <div class="card">
+    <h2><span class="num">🛒</span>采购清单（对着勾）</h2>
+    <label class="chk"><input type="checkbox"><span><b>青口贝 1kg</b>（海鲜店 mosselen；出肉约 300g）</span></label>
+    <label class="chk"><input type="checkbox"><span>干白葡萄酒 150–200ml（Sauvignon Blanc；<b>别用甜白</b>）</span></label>
+    <label class="chk"><input type="checkbox"><span>新鲜欧芹 peterselie 一把</span></label>
+    <label class="chk"><input type="checkbox"><span>土豆 1 个（约 150g，如家里没有）</span></label>
+    <label class="chk"><input type="checkbox"><span>小米辣 / 红辣椒 1–2 个（想吃辣时）</span></label>
+    <div class="desc">家里已有：虾仁、玉米淀粉、蒜、葱、洋葱、黄油、椒盐/花椒粉、盐、白胡椒、料酒/白葡萄酒、油。</div>
+  </div>
+
+  <!-- 时钟时间表 -->
+  <div class="card">
+    <h2><span class="num">⏰</span>时钟时间表（边做边勾）</h2>
+    <div class="desc">想提前开饭，把下面所有时间整体前移即可。</div>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">17:50</span><b>提前解冻虾仁</b>：还没解冻就冷水泡袋快速化（或提前移冷藏）。不解冻好后面裹粉会脱浆。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">17:55</span><b>焖米饭</b>：生米约 180g 淘好下电饭煲，煮上保温。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:00</span><b>备料 + 泡土豆</b>：土豆切角<b>泡冷水 10–15 分</b>；洋葱切碎、蒜切末、葱白葱绿分开、辣椒切圈、欧芹切碎；虾仁解冻好后<b>擦干</b>。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:10</span><b>腌虾仁</b>：擦干的虾仁 + 盐 + 白胡椒 + 料酒少许，抓匀腌 10 分。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:12</span><b>处理青口贝</b>：冲洗刷壳、拽足丝；<b>敲一下不闭合的、壳破的直接丢掉</b>（死贝）。处理好泡冷水备用。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:15</span><b>薯角进空气炸锅</b>：土豆<b>彻底擦干</b> → 拌 1 大勺玉米淀粉 + 少油 + 盐 → 200°C 单层平铺，烤 18–22 分，中途翻面 1–2 次。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:22</span><b>煎虾仁</b>（灶眼 B）：虾仁<b>再擦干一次</b> → 薄裹淀粉抖多余 → 热油单层煎两面金黄微酥（2–3 分）盛出；原锅爆香蒜末+葱白+辣椒（10–20 秒）→ 虾仁回锅撒<b>椒盐</b>颠匀撒葱绿。（可稍等）</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:30</span><b>焖青口贝</b>（灶眼 A）：黄油炒洋葱蒜出香 → 白葡萄酒煮开 1–2 分 → 青口下锅<b>盖盖大火焖 4–6 分</b>到全开 → 撒欧芹+黑胡椒，尝汤（多半不加盐）。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:35</span><b>薯角出锅</b>：趁热撒蒜末 + 椒盐颠匀。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:40</span><b>上桌 🍽️</b>：青口贝（连汤）+ 椒盐虾仁 + 蒜香薯角 + 米饭。薯角蘸青口汤＝moules-frites。<b>没开口的青口丢掉别吃。</b></span></label>
+  </div>
+
+  <!-- 关键别翻车 -->
+  <div class="card">
+    <h2><span class="num">🔑</span>关键别翻车</h2>
+    <div class="warn">
+      • <b>青口活贝才安全</b>：煮前敲不闭合/壳破的丢掉，煮后不张开的也丢掉。别煮过头，壳一开就关火。<br>
+      • <b>虾仁擦干两次</b>（解冻后 + 腌后）：出水就不脆、溅油；薄淀粉壳才起酥，别过火（金黄微卷就好）。<br>
+      • <b>薯角泡水擦干 + 薄淀粉 + 单层平铺</b>：高温少油淀粉壳＝干香酥脆；蒜末出锅后撒才不糊；趁热吃。<br>
+      • <b>盐都慎放</b>：青口自带海盐、虾仁腌时有底味、薯角有椒盐——三样都少放盐，尝了再补。<br>
+      • <b>分量</b>：虾仁 200g + 青口 1kg（出肉~300g）≈ 500g 蛋白达标；薯角 ~150g + 米饭 180g 双碳水已减量，别再堆。
+    </div>
+  </div>
+
+  <!-- 搭配 -->
+  <div class="card">
+    <h2><span class="num">🍽️</span>搭配 & 蘸酱</h2>
+    <div class="ref">
+      <div class="row"><div class="k">主角</div><div>白葡萄酒青口贝（连汤，法式 moules）</div></div>
+      <div class="row"><div class="k">补蛋白</div><div>椒盐虾仁（本周新菜，咸香酥）</div></div>
+      <div class="row"><div class="k">主食</div><div>蒜香薯角 ~150g + 米饭 180g</div></div>
+      <div class="row"><div class="k">蘸酱</div><div>薯角蘸青口汤；或番茄酱/蛋黄酱/酸奶酱（另碗）</div></div>
+      <div class="row"><div class="k">饮品</div><div>剩下的干白直接配着喝</div></div>
+    </div>
+  </div>
+
+  <!-- 反馈 -->
+  <div class="card record">
+    <h2><span class="num">✓</span>今日反馈</h2>
+    <label>日期</label>
+    <input type="text" value="2026-07-22" placeholder="YYYY-MM-DD">
+    <label>椒盐虾仁（酥脆 / 咸淡 / 辣度 / 锅煎vs空炸）</label>
+    <input type="text" placeholder="例如：够酥、椒盐刚好、锅煎更方便">
+    <label>青口贝（用酒量 / 克数 / 焖几分钟开）</label>
+    <input type="text" placeholder="例如：1kg、白酒约180ml、焖5分全开">
+    <label>薯角（脆度 / 时间温度 / 淀粉量）</label>
+    <input type="text" placeholder="例如：脆、200°C 20分、淀粉1勺">
+    <label>备注 / 下次想改</label>
+    <textarea rows="2" placeholder="写下次想调的点"></textarea>
+    <button id="copyBtn" class="btn">📋 复制今日反馈</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置</button>
+    <div id="saveStatus" class="save"></div>
+  </div>
+
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要反馈用「复制今日反馈」存到别处。</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input, .record textarea'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = {
+      checks: checks.map(function(c){ return c.checked; }),
+      rec: recInputs.map(function(i){ return i.value; }),
+      at: Date.now()
+    };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){
+      statusEl.textContent = '（此环境无法保存，刷新会丢失）';
+    }
+  }
+
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      if(data.rec){
+        data.rec.forEach(function(v, i){ if(recInputs[i]){ recInputs[i].value = v; } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
+  });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var lines = [];
+    lines.push(document.querySelector('header h1').textContent.trim() + ' · ' + (recInputs[0] ? recInputs[0].value : ''));
+    var done = 0;
+    checks.forEach(function(c){ if(c.checked) done++; });
+    lines.push('步骤完成（' + done + '/' + checks.length + '）');
+    var extra = [];
+    if(recInputs[1] && recInputs[1].value) extra.push('椒盐虾仁：' + recInputs[1].value);
+    if(recInputs[2] && recInputs[2].value) extra.push('青口贝：' + recInputs[2].value);
+    if(recInputs[3] && recInputs[3].value) extra.push('薯角：' + recInputs[3].value);
+    if(recInputs[4] && recInputs[4].value) extra.push('备注：' + recInputs[4].value);
+    if(extra.length){ lines.push('反馈：'); extra.forEach(function(e){ lines.push('  ' + e); }); }
+    copyText(lines.join('\n'));
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    recInputs.forEach(function(i){ i.value = i.defaultValue || ''; });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ statusEl.textContent = '已复制到剪贴板，去笔记里粘贴'; },
+        function(){ fallbackCopy(text); }
+      );
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    window.prompt('复制下面内容到你的笔记：', text);
+  }
+
+  restore();
+})();
+</script>
+</body>
+</html>
