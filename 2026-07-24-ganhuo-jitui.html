@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>周五晚餐 7/24 · 干锅鸡腿丁+烤胡萝卜</title>
+<style>
+  :root{
+    --bg:#f2f3f5; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#1f7a4d; --accent2:#e8f3ee; --line:#e6e8eb; --warn:#b8860b; --hot:#c0392b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#1f7a4d,#2f9e63);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(31,122,77,.25);
+  }
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px; font-size:22px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px;}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .sets{display:flex; flex-wrap:wrap; gap:7px; margin:8px 0 4px;}
+  .badge{background:var(--accent2); color:var(--accent); border-radius:8px;
+    padding:4px 9px; font-size:13px; font-weight:600;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  .cue{font-size:14px; color:var(--ink); margin:3px 0; padding-left:14px; position:relative;}
+  .cue:before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px;
+    background:var(--accent); border-radius:50%;}
+  .cue.hot:before{background:var(--hot);}
+  label.chk{display:flex; align-items:center; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:16px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#eef6f1}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; accent-color:var(--accent);}
+  label.chk.done{background:#eaf5ef; border-color:#bfe3cf}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .rest{font-size:13px; color:var(--warn); margin-top:2px; padding-left:4px}
+  .ref{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .ref h3{margin:0 0 8px; font-size:16px}
+  .ref table{width:100%; border-collapse:collapse; font-size:14px}
+  .ref td{padding:5px 6px; border-bottom:1px solid var(--line)}
+  .ref td:first-child{color:var(--sub); white-space:nowrap}
+  .record input[type=text],.record input[type=number],.record textarea{
+    width:100%; border:1px solid var(--line); border-radius:9px; padding:10px;
+    font-size:16px; margin:4px 0 10px; font-family:inherit; resize:vertical;}
+  .record label{font-size:14px; color:var(--sub); display:block}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🍗</div>
+    <h1>周五晚餐 · 手机菜谱</h1>
+    <div class="meta">2026-07-24（周五）· 开饭 18:45</div>
+    <div>
+      <span class="pill">两人份</span>
+      <span class="pill">鸡丁已腌</span>
+      <span class="pill">烤箱烤胡萝卜</span>
+    </div>
+  </header>
+
+  <div class="note">
+    ⏰ <b>开饭 18:45</b>。鸡丁早上已腌好、酸奶酱早上做好（下班直接拿）；节奏轻松——烤箱 + 蒸锅都 hands-off，你主要顾干锅主线那一口锅。
+  </div>
+
+  <!-- 菜单总览 -->
+  <div class="ref">
+    <h3>📋 今晚菜单</h3>
+    <table>
+      <tr><td>干锅鸡腿丁</td><td>主菜（鸡腿肉 300g 实买）</td></tr>
+      <tr><td>肉末蒸蛋</td><td>补蛋白（肉末 150g + 蛋 3）</td></tr>
+      <tr><td>拍黄瓜</td><td>解辣凉菜</td></tr>
+      <tr><td>烤胡萝卜配酸奶酱</td><td>烤箱蔬菜（解腻解辣）</td></tr>
+      <tr><td>米饭</td><td>主食（电饭煲）</td></tr>
+      <tr><td>🌅 早餐另算</td><td>猪肉玉米馅饺子（去腥加强版）</td></tr>
+    </table>
+  </div>
+
+  <!-- 采购清单 -->
+  <div class="card">
+    <h2><span class="num">🛒</span>采购清单</h2>
+    <div class="desc">今晚/明早买（家里已有：干辣椒·花椒·豆瓣·生抽·蚝油·糖·白芝麻·油·盐·蒜姜葱·黑胡椒·橄榄油·柠檬）</div>
+    <label class="chk"><input type="checkbox"><span>鸡腿肉 400–500g（去骨）</span></label>
+    <label class="chk"><input type="checkbox"><span>土豆 1–2 个（约 200g）</span></label>
+    <label class="chk"><input type="checkbox"><span>青椒 1 个</span></label>
+    <label class="chk"><input type="checkbox"><span>洋葱 ½ 个</span></label>
+    <label class="chk"><input type="checkbox"><span>料酒 1 大勺（或白葡萄酒）</span></label>
+    <label class="chk"><input type="checkbox"><span>黄瓜 2 根（拍黄瓜）</span></label>
+    <label class="chk"><input type="checkbox"><span>猪肉末 150g（补蛋白）</span></label>
+    <label class="chk"><input type="checkbox"><span>鸡蛋 3 个（家里常备则不用买）</span></label>
+    <label class="chk"><input type="checkbox"><span>胡萝卜 3–4 根（烤胡萝卜；家里有则省）</span></label>
+    <label class="chk"><input type="checkbox"><span>希腊酸奶 1 盒（酸奶酱；常备则省）</span></label>
+  </div>
+
+  <!-- 0 早上前置 -->
+  <div class="card">
+    <h2><span class="num">0</span>早上出门前（前置）</h2>
+    <div class="desc">这两步早上做完，下班直接炒，节奏全顺。</div>
+    <label class="chk"><input type="checkbox"><span>腌鸡丁：去骨切 2–3cm 丁，擦干 → 生抽1大勺+白胡椒+蚝油½小勺+料酒1大勺，抓匀按摩2分 → 冷藏</span></label>
+    <label class="chk"><input type="checkbox"><span>酸奶酱：黄瓜擦极细丝挤水 + 希腊酸奶3–4大勺 + 蒜泥1–2瓣 + 柠檬汁几滴 + 橄榄油几滴 + 盐 + 黑胡椒，拌匀冷藏</span></label>
+    <div class="rest">酸奶酱早上做更入味；对象爱吃酸奶酱，正常配不用分碗。</div>
+  </div>
+
+  <!-- 1 18:00 备料+烤箱 -->
+  <div class="card">
+    <h2><span class="num">1</span>18:00 备料 + 入烤箱</h2>
+    <div class="sets"><span class="badge">5 分钟</span><span class="badge">烤箱并行</span></div>
+    <label class="chk"><input type="checkbox"><span>鸡丁从冰箱取出，擦干表面腌料（保干香）</span></label>
+    <label class="chk"><input type="checkbox"><span>土豆切滚刀/片，焯水 2–3 分盛出</span></label>
+    <label class="chk"><input type="checkbox"><span>青椒洋葱切块、蒜姜切片、干辣椒掰碎</span></label>
+    <label class="chk"><input type="checkbox"><span>打蛋液：3蛋 + 盐一小撮 + 几滴生抽 + 温水1.5倍（约220–250ml），搅匀过筛撇沫</span></label>
+    <label class="chk"><input type="checkbox"><span>切胡萝卜（2–3cm滚刀块，不去皮刷净）拌橄榄油+盐+黑胡椒，单层平铺烤盘</span></label>
+    <label class="chk"><input type="checkbox"><span>烤箱 200°C 入炉（烤 25–30 分，18:30 出，中途翻面）</span></label>
+  </div>
+
+  <!-- 2 干锅主线 -->
+  <div class="card">
+    <h2><span class="num">2</span>干锅主线（18:05–18:22）</h2>
+    <div class="sets"><span class="badge">单锅顺序</span><span class="badge">辣不怕</span></div>
+    <label class="chk"><input type="checkbox"><span>18:05 煎鸡丁：中大火，下锅别急翻，煎2–3分/面至四面金黄微焦盛出（一次别太满）</span></label>
+    <label class="chk"><input type="checkbox"><span>18:05 蒸蛋：灶眼B烧水，水开下蛋碗（盖保鲜膜扎2–3孔）蒸10–12分+焖2分</span></label>
+    <label class="chk"><input type="checkbox"><span>18:10 爆香：原锅留底油小火，花椒+干辣椒慢焙出香 → 姜蒜片 → 郫县豆瓣小火炒出红油（30–60秒）</span></label>
+    <label class="chk"><input type="checkbox"><span>18:13 合炒：下洋葱青椒土豆炒匀 → 倒回鸡丁，加生抽+蚝油+糖，中火翻2–3分裹味</span></label>
+    <label class="chk"><input type="checkbox"><span>18:17 收汁：汤汁收紧裹匀，撒白芝麻+葱花关火装盘</span></label>
+    <label class="chk"><input type="checkbox"><span>18:19 炒肉末浇蒸蛋：同锅下油+蒜末爆香 → 肉末150g炒散熟 → 生抽½小勺+糖炒香，连汁浇蒸蛋撒葱花</span></label>
+    <div class="rest">花椒干辣椒一定小火，辣椒一糊整道发苦；郫县豆瓣本身咸，生抽适量。</div>
+  </div>
+
+  <!-- 3 配菜 -->
+  <div class="card">
+    <h2><span class="num">3</span>配菜（并行）</h2>
+    <div class="sets"><span class="badge">无火/烤箱</span></div>
+    <label class="chk"><input type="checkbox"><span>拍黄瓜（临上桌前拌）：拍裂切段，蒜末+生抽+醋+辣油+少许糖现拌，防出水</span></label>
+    <label class="chk"><input type="checkbox"><span>18:30 烤胡萝卜出炉：边缘焦糖化、筷子能戳透即好，撒少许盐/黑胡椒，配酸奶酱上桌</span></label>
+  </div>
+
+  <!-- 4 关键别翻车 -->
+  <div class="card">
+    <h2><span class="num">!</span>关键别翻车</h2>
+    <div class="cue">鸡丁入味只靠腌制：合炒汁只裹表面，早上务必腌好</div>
+    <div class="cue">鸡丁要干香：擦干 + 热油 + 别急翻；一次别下太满出水变煮白</div>
+    <div class="cue hot">花椒干辣椒小火冷油慢焙，闻到香就下豆瓣；辣椒糊=整道苦</div>
+    <div class="cue">土豆提前焯水，否则干锅夹生</div>
+    <div class="cue">蒸蛋嫩 = 温水1.5倍 + 过筛 + 小火加盖 + 刚凝固关火焖2分；肉末单独炒香再浇更嫩</div>
+    <div class="cue">烤胡萝卜 = 单层平铺不叠 + 200°C 25–30分 + 中途翻面；不去皮更香</div>
+    <div class="cue">酸奶酱早上做更入味；Greek yogurt最浓，普通酸奶先滤水；蒜泥放心放</div>
+  </div>
+
+  <!-- 记录 -->
+  <div class="card record">
+    <h2><span class="num">✓</span>今晚反馈</h2>
+    <label>开饭时间</label>
+    <input type="text" value="18:45" placeholder="实际几点吃上">
+    <label>干锅鸡腿丁</label>
+    <textarea rows="2" placeholder="咸淡/辣度/嫩度，像不像餐厅"></textarea>
+    <label>肉末蒸蛋</label>
+    <textarea rows="2" placeholder="嫩不嫩、肉末香不香"></textarea>
+    <label>烤胡萝卜 + 酸奶酱</label>
+    <textarea rows="2" placeholder="焦糖甜够不够、酸奶酱浓度"></textarea>
+    <label>下次改进</label>
+    <textarea rows="2" placeholder="哪道要调，怎么调"></textarea>
+    <button id="copyBtn" class="btn">📋 复制今晚反馈</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置本页</button>
+    <div id="saveStatus" class="save"></div>
+  </div>
+
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要反馈用「复制今晚反馈」存到笔记。</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input, .record textarea'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = {
+      checks: checks.map(function(c){ return c.checked; }),
+      rec: recInputs.map(function(i){ return i.value; }),
+      at: Date.now()
+    };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){
+      statusEl.textContent = '（此环境无法保存，刷新会丢失）';
+    }
+  }
+
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      if(data.rec){
+        data.rec.forEach(function(v, i){ if(recInputs[i]){ recInputs[i].value = v; } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
+  });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var done = [], undone = [];
+    checks.forEach(function(c){
+      var txt = c.closest('label.chk').querySelector('span').textContent.trim();
+      (c.checked ? done : undone).push(txt);
+    });
+    var lines = [];
+    lines.push(document.querySelector('header h1').textContent.trim() + ' · ' + (recInputs[0] ? recInputs[0].value : ''));
+    lines.push('完成（' + done.length + '/' + checks.length + '）：');
+    done.forEach(function(t){ lines.push('  ✅ ' + t); });
+    if(undone.length){ lines.push('未完成：'); undone.forEach(function(t){ lines.push('  ⬜ ' + t); }); }
+    var extra = [];
+    for(var k=1;k<recInputs.length;k++){
+      var lab = recInputs[k].closest('.record').querySelectorAll('label')[k-1];
+      if(recInputs[k] && recInputs[k].value) extra.push((lab?lab.textContent.trim()+': ':'') + recInputs[k].value);
+    }
+    if(extra.length){ lines.push(''); extra.forEach(function(e){ lines.push(e); }); }
+    copyText(lines.join('\n'));
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    recInputs.forEach(function(i){ i.value = i.defaultValue || ''; });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ statusEl.textContent = '已复制到剪贴板，去笔记里粘贴'; },
+        function(){ fallbackCopy(text); }
+      );
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    window.prompt('复制下面内容到你的笔记：', text);
+  }
+
+  restore();
+})();
+</script>
+</body>
+</html>
