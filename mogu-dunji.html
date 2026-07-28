@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>蘑菇炖鸡·奶油菌菇版</title>
+<style>
+  :root{
+    --bg:#f2f3f5; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#1f7a4d; --accent2:#e8f3ee; --line:#e6e8eb; --warn:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;font-size:17px;line-height:1.5;padding-bottom:40px;}
+  .wrap{max-width:540px;margin:0 auto;padding:14px;}
+  header{background:linear-gradient(135deg,#1f7a4d,#2f9e63);color:#fff;border-radius:16px;padding:18px 18px 16px;margin-bottom:14px;box-shadow:0 4px 14px rgba(31,122,77,.25);}
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px;font-size:22px;font-weight:700}
+  header .meta{font-size:14px;opacity:.92}
+  .pill{display:inline-block;background:rgba(255,255,255,.2);border-radius:20px;padding:2px 10px;font-size:13px;margin:6px 6px 0 0;}
+  .note{background:#fff8e6;border:1px solid #f0dca0;color:#7a5b00;border-radius:12px;padding:10px 12px;font-size:14px;margin-bottom:14px;}
+  .card{background:var(--card);border-radius:14px;padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px;font-size:18px;display:flex;align-items:center;gap:8px;}
+  .card h2 .num{background:var(--accent);color:#fff;width:26px;height:26px;flex:0 0 26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;}
+  .sets{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 4px;}
+  .badge{background:var(--accent2);color:var(--accent);border-radius:8px;padding:4px 9px;font-size:13px;font-weight:600;}
+  .desc{color:var(--sub);font-size:14.5px;margin:6px 0 4px;}
+  .cue{font-size:14px;color:var(--ink);margin:3px 0;padding-left:14px;position:relative;}
+  .cue:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;background:var(--accent);border-radius:50%;}
+  label.chk{display:flex;align-items:center;gap:10px;padding:11px 10px;margin:7px 0;background:#fafbfc;border:1px solid var(--line);border-radius:11px;font-size:16px;user-select:none;cursor:pointer;transition:background .15s;}
+  label.chk:active{background:#eef6f1}
+  label.chk input{width:24px;height:24px;flex:0 0 24px;accent-color:var(--accent);}
+  label.chk.done{background:#eaf5ef;border-color:#bfe3cf}
+  label.chk.done span{text-decoration:line-through;color:var(--sub)}
+  .rest{font-size:13px;color:var(--warn);margin-top:2px;padding-left:4px}
+  .ref{background:var(--card);border-radius:14px;padding:14px 15px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .ref h3{margin:0 0 8px;font-size:16px}
+  .ref table{width:100%;border-collapse:collapse;font-size:14px}
+  .ref td{padding:5px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  .ref td:first-child{color:var(--sub);white-space:nowrap;width:38%}
+  .record input[type=text],.record input[type=number]{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;font-size:16px;margin:4px 0 10px;font-family:inherit;}
+  .record label{font-size:14px;color:var(--sub);display:block}
+  .footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:6px}
+  .btn{display:block;width:100%;border:none;border-radius:11px;padding:13px;font-size:16px;font-weight:600;margin-top:10px;cursor:pointer;background:var(--accent);color:#fff;font-family:inherit;}
+  .btn.ghost{background:#fff;color:var(--sub);border:1px solid var(--line);margin-top:8px;}
+  .save{font-size:12.5px;color:var(--sub);margin-top:8px;text-align:center;min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="emoji">🍗</div>
+    <h1>蘑菇炖鸡（奶油菌菇版）</h1>
+    <div class="meta">2026-07-28 周二 · 两人份 · 30–60 分钟</div>
+    <div>
+      <span class="pill">🐔 鸡</span>
+      <span class="pill">🇫🇷 法式</span>
+      <span class="pill">🍚 很下饭</span>
+      <span class="pill">🆕 首做待验证</span>
+    </div>
+  </header>
+
+  <div class="note">
+    💡 鸡腿肉煎香 + 多菇煸透 + 白葡萄酒奶油慢炖，法式家常浓香，配饭一绝。
+  </div>
+
+  <div class="ref">
+    <h3>🛒 食材（两人份）</h3>
+    <table>
+      <tr><td>鸡腿肉（去骨）</td><td>~450g（生重，切大块；比鸡胸耐炖不易柴）</td></tr>
+      <tr><td>混合蘑菇</td><td>~300g（口蘑/褐菇/香菇/平菇切片，多菇复配更立体）</td></tr>
+      <tr><td>蒜</td><td>3–4 瓣切片</td></tr>
+      <tr><td>洋葱</td><td>¼ 个切丁（可选但推荐）</td></tr>
+      <tr><td>干香料</td><td>百里香 / 混合香草 ~1 小勺（新鲜 thyme 几枝更香）</td></tr>
+      <tr><td>白葡萄酒</td><td>~80–100ml</td></tr>
+      <tr><td>高汤</td><td>鸡 / 蔬菜高汤 ~150ml</td></tr>
+      <tr><td>淡奶油</td><td>kitchen cream / crème fraîche ~100ml</td></tr>
+      <tr><td>黄油 / 橄榄油</td><td>适量</td></tr>
+      <tr><td>盐、黑胡椒、欧芹</td><td>适量（欧芹点缀可选）</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">1</span>煎鸡腿肉上色</h2>
+    <div class="desc">鸡腿肉擦干撒盐黑胡椒，热油（可半黄油）鸡皮朝下中大火煎金黄，盛出备用。</div>
+    <label class="chk"><input type="checkbox"><span>鸡腿肉擦干，撒盐 + 黑胡椒</span></label>
+    <label class="chk"><input type="checkbox"><span>热油鸡皮朝下，中大火煎 3–4 分/面至金黄</span></label>
+    <label class="chk"><input type="checkbox"><span>盛出备用（锅留底油）</span></label>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span>煸蘑菇 + 炒香</h2>
+    <div class="desc">原锅下蒜片 + 洋葱丁炒香，混合蘑菇中火煸到出水收干、边缘焦黄。</div>
+    <label class="chk"><input type="checkbox"><span>蒜片 + 洋葱丁炒香</span></label>
+    <label class="chk"><input type="checkbox"><span>下混合蘑菇，中火煸至出水收干、边缘焦黄</span></label>
+    <label class="chk"><input type="checkbox"><span>下干香料（百里香等）略炒</span></label>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span>白葡萄酒 + 高汤</h2>
+    <div class="desc">倒白葡萄酒煮沸、刮锅底，收汁至约一半；倒回鸡肉加高汤盖盖炖。</div>
+    <label class="chk"><input type="checkbox"><span>倒白葡萄酒煮沸、刮锅底，收汁至约一半</span></label>
+    <label class="chk"><input type="checkbox"><span>倒回鸡肉，加高汤，盖盖小火炖 10 分</span></label>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">4</span>加奶油收汁</h2>
+    <div class="desc">开盖加淡奶油，再炖 5–10 分至汤汁微稠、鸡肉熟透。奶油最后放、勿久滚避免分离。</div>
+    <label class="chk"><input type="checkbox"><span>开盖加淡奶油，再炖 5–10 分至微稠</span></label>
+    <label class="chk"><input type="checkbox"><span>尝味补盐 + 黑胡椒</span></label>
+    <label class="chk"><input type="checkbox"><span>撒欧芹，配白灼青菜 + 米饭上桌</span></label>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">!</span>关键提醒</h2>
+    <div class="cue">蘑菇先煸干再炖，否则出水稀释酱汁、风味寡淡</div>
+    <div class="cue">白葡萄酒是法式底味，别省（无酒用高汤 + 1 小勺白酒醋）</div>
+    <div class="cue">奶油最后放、勿久滚，避免分离；crème fraîche 比淡奶油更稳</div>
+    <div class="cue">鸡腿肉优先于鸡胸，久炖不柴</div>
+    <div class="cue">配白灼青菜 / 蒜蓉西兰花解腻；主食米饭或土豆泥</div>
+  </div>
+
+  <div class="card record">
+    <h2><span class="num">✓</span>复做记录</h2>
+    <label>日期</label>
+    <input type="text" value="2026-07-28" placeholder="YYYY-MM-DD">
+    <label>实际炖煮时长（分钟）</label>
+    <input type="text" placeholder="如 18">
+    <label>口味反馈</label>
+    <input type="text" placeholder="咸淡 / 香浓 / 是否柴">
+    <label>下次调整</label>
+    <input type="text" placeholder="盐 / 奶油 / 酒 / 菇量…">
+    <button id="copyBtn" class="btn">📋 复制今日记录</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置</button>
+    <div id="saveStatus" class="save"></div>
+  </div>
+
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要记录用「复制今日记录」存到笔记。</div>
+</div>
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input'));
+  var statusEl = document.getElementById('saveStatus');
+  function save(){
+    var data = { checks: checks.map(function(c){return c.checked;}), rec: recInputs.map(function(i){return i.value;}), at: Date.now() };
+    try { localStorage.setItem(KEY, JSON.stringify(data)); var t=new Date(data.at); statusEl.textContent='已自动保存 '+t.getHours()+':'+('0'+t.getMinutes()).slice(-2); } catch(e){ statusEl.textContent='（此环境无法保存，刷新会丢失）'; }
+  }
+  function sync(i){ var lbl=checks[i].closest('label.chk'); lbl.classList.toggle('done', checks[i].checked); }
+  function restore(){
+    try { var raw=localStorage.getItem(KEY); if(!raw) return; var data=JSON.parse(raw);
+      if(data.checks){ data.checks.forEach(function(v,i){ if(checks[i]){ checks[i].checked=v; sync(i); } }); }
+      if(data.rec){ data.rec.forEach(function(v,i){ if(recInputs[i]){ recInputs[i].value=v; } }); }
+      var t=data.at?new Date(data.at):null; if(t) statusEl.textContent='已恢复 '+t.getHours()+':'+('0'+t.getMinutes()).slice(-2)+' 的进度';
+    } catch(e){}
+  }
+  checks.forEach(function(c,i){ c.addEventListener('change',function(){ sync(i); save(); }); });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var done=[], undone=[];
+    checks.forEach(function(c){ var txt=c.closest('label.chk').querySelector('span').textContent.trim(); (c.checked?done:undone).push(txt); });
+    var lines=[];
+    lines.push(document.querySelector('header h1').textContent.trim());
+    if(recInputs[0]&&recInputs[0].value) lines.push('日期：'+recInputs[0].value);
+    if(recInputs[1]&&recInputs[1].value) lines.push('炖煮时长：'+recInputs[1].value+' 分');
+    if(recInputs[2]&&recInputs[2].value) lines.push('口味反馈：'+recInputs[2].value);
+    if(recInputs[3]&&recInputs[3].value) lines.push('下次调整：'+recInputs[3].value);
+    lines.push('');
+    lines.push('步骤完成（'+done.length+'/'+checks.length+'）：');
+    done.forEach(function(t){ lines.push('  ✅ '+t); });
+    if(undone.length){ lines.push('未完成：'); undone.forEach(function(t){ lines.push('  ⬜ '+t); }); }
+    copyText(lines.join('\n'));
+  });
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c,i){ c.checked=false; sync(i); });
+    recInputs.forEach(function(i){ i.value=i.defaultValue||''; });
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    statusEl.textContent='已重置';
+  });
+  function copyText(text){ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(function(){statusEl.textContent='已复制到剪贴板，去笔记里粘贴';},function(){fallbackCopy(text);}); } else { fallbackCopy(text); } }
+  function fallbackCopy(text){ window.prompt('复制下面内容到你的笔记：', text); }
+  restore();
+})();
+</script>
+</body>
+</html>
