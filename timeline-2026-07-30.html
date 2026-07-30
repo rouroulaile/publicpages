@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>今晚菜单 · 低温慢烤三文鱼 + 鳀鱼西兰花</title>
+<style>
+  :root{
+    --bg:#f2f3f5; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#1f7a4d; --accent2:#e8f3ee; --line:#e6e8eb; --warn:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#1f7a4d,#2f9e63);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(31,122,77,.25);
+  }
+  header .emoji{font-size:30px}
+  header h1{margin:6px 0 2px; font-size:21px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px;}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .badge{background:var(--accent2); color:var(--accent); border-radius:8px;
+    padding:4px 9px; font-size:13px; font-weight:600;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  .cue{font-size:14px; color:var(--ink); margin:3px 0; padding-left:14px; position:relative;}
+  .cue:before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px;
+    background:var(--accent); border-radius:50%;}
+  .time{font-weight:700; color:var(--accent); font-size:15px; margin-right:4px;}
+  label.chk{display:flex; align-items:center; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:16px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#eef6f1}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; accent-color:var(--accent);}
+  label.chk.done{background:#eaf5ef; border-color:#bfe3cf}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .must{color:#c0392b; font-weight:600;}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🍣</div>
+    <h1>今晚菜单 · 低温慢烤三文鱼 + 鳀鱼西兰花</h1>
+    <div class="meta">2026-07-30 周四 · 19:00 开饭</div>
+    <div>
+      <span class="pill">主菜 三文鱼 400–500g</span>
+      <span class="pill">地中海清爽</span>
+      <span class="pill">莳萝酸奶油酱</span>
+    </div>
+  </header>
+
+  <div class="note">
+    ⚠️ <b>今晚必买</b>：鳀鱼柳（油浸罐装，Plus 售 ansjovis）、酸奶油（sour cream / zure room）、鲜莳萝（dille）、三文鱼厚块、西兰花、柠檬。其余蒜/橄榄油/盐/黑胡椒/米常备都有。<br>
+    🔔 做完饭记得把<b>明天鸡翅腌上冷藏</b>（隔夜腌更入味）。
+  </div>
+
+  <!-- 采购清单 -->
+  <div class="card">
+    <h2><span class="num">🛒</span>采购清单（今晚买）</h2>
+    <label class="chk"><input type="checkbox"><span><span class="must">三文鱼厚块 400–500g</span>（要厚切 2.5–3cm，一份常 250–300g 买两份）</span></label>
+    <label class="chk"><input type="checkbox"><span>西兰花 1 棵（约 300–400g）</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">鳀鱼柳（油浸罐装）</span> 1 小罐 ⚠️ 存货无必买</span></label>
+    <label class="chk"><input type="checkbox"><span>柠檬 1 个（铺烤+挤汁+酱汁）</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">酸奶油（sour cream / zure room）</span> 1 盒 ⚠️ 存货无必买</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">鲜莳萝（dille）</span> 1 小把 ⚠️ 存货无必买</span></label>
+  </div>
+
+  <!-- 时钟表 -->
+  <div class="card">
+    <h2><span class="num">⏰</span>时钟表（开饭 19:00 倒推）</h2>
+    <div class="desc">低温慢烤节奏轻松，三文鱼进烤箱后有 20–30 分钟空档，临上桌前现炒鳀鱼西兰花即可。</div>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:20</span>米下电饭煲（约 30 分熟，18:50 好，保温待上）</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:25</span>备料 5 分：三文鱼厨房纸<b>吸干表面水</b>，两面撒盐+黑胡椒、淋橄榄油，摆柠檬片+轻拍蒜+香草装盘；西兰花切小朵、蒜切片、鳀鱼沥干切小、柠檬另切半。<b>烤箱预热 120°C</b>。<b>同时调莳萝酸奶油酱冷藏</b>。</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:30</span>三文鱼入炉 120°C，烤 20–30 分；中心插温度计盯 <b>50–52°C</b>（无温度计：20 分起每 3 分查，边缘发白、中心淡粉半透明即停）</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:50</span>焯西兰花 2 分：小锅水开加盐，西兰花小朵下焯 1–2 分至翠绿断生，捞出沥干（想要更脆可过冰水）</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:52</span>煸鳀鱼蒜底 3 分：<b>小火冷油</b>下蒜片+鳀鱼，慢慢煸到鳀鱼化开、蒜香溢出成咸鲜酱状——<b>别大火糊</b></span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:55</span>炒西兰花出锅 2 分：下西兰花翻炒裹匀，撒黑胡椒+极少量盐（鳀鱼已咸），出锅保温</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:55 起</span>三文鱼检查：到 50–52°C 即出（约 18:58–19:00）；出炉挤柠檬汁、撒鲜香草、可选点一小块黄油，静置 1–2 分</span></label>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:58</span>装盘 + 淋/蘸<b>莳萝酸奶油酱</b> + 上桌 → <b>19:00 开饭 🍽️</b>（三文鱼+酱+鳀鱼西兰花+米饭）</span></label>
+  </div>
+
+  <!-- 酱汁 -->
+  <div class="card">
+    <h2><span class="num">🥣</span>莳萝酸奶油酱（冷酱）</h2>
+    <div class="desc">酸奶油 150–200g + 鲜莳萝碎 1 大勺 + ½ 柠檬汁 + ½ 瓣蒜蓉（可选）+ 盐/黑胡椒少许，拌匀冷藏。18:25 备料时调好，上桌直接淋在粉嫩三文鱼上或单碗蘸。</div>
+    <div class="cue">酸奶油自带咸味，<b>盐要少放</b>、尝过再补</div>
+    <div class="cue">冷酱，备料时调好冷藏，不要加热</div>
+  </div>
+
+  <!-- 关键提醒 -->
+  <div class="card">
+    <h2><span class="num">⚠️</span>关键别翻车</h2>
+    <div class="cue"><b>低温 120°C 是核心</b>：别手痒调高，高温会烤出干柴边、失掉「慕斯感」</div>
+    <div class="cue"><b>内部 50–52°C 最嫩</b>：过 54°C 变熟柴；无温度计看中心「淡粉半透明」即停</div>
+    <div class="cue"><b>厚块才好低温烤</b>：买厚切 2.5–3cm，薄片容易过熟</div>
+    <div class="cue"><b>鳀鱼是「隐形鲜味」不是咸鱼腥</b>：小火煸化成酱，整道只留咸鲜；盐一定要少</div>
+    <div class="cue"><b>西兰花先焯后炒</b>：生炒出水发黄；焯过翻两下就出锅，翠绿脆嫩</div>
+    <div class="cue">🔔 今晚另需把<b>明日鸡翅腌上冷藏</b>（隔夜腌更入味）</div>
+  </div>
+
+  <button id="resetBtn" class="btn ghost">↺ 重置今日勾选</button>
+  <div id="saveStatus" class="save"></div>
+
+  <div class="footer">勾选进度自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢。</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = { checks: checks.map(function(c){ return c.checked; }), at: Date.now() };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){ statusEl.textContent = '（此环境无法保存，刷新会丢失）'; }
+  }
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
+  });
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+  restore();
+})();
+</script>
+</body>
+</html>
