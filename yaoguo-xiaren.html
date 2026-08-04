@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>粤式腰果西芹炒虾仁 · 手机看菜版</title>
+<style>
+  :root{
+    --green:#2e7d32; --green-d:#1b5e20; --green-l:#e8f5e9;
+    --bg:#f4faf4; --card:#ffffff; --line:#c8e6c9; --txt:#1f2d22; --sub:#5b6b5e;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; background:var(--bg); color:var(--txt);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    font-size:17px; line-height:1.6; padding-bottom:40px;}
+  header{background:var(--green); color:#fff; padding:16px 18px; position:sticky; top:0; z-index:10;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);}
+  header h1{margin:0; font-size:21px; font-weight:700;}
+  header .meta{font-size:13px; opacity:.9; margin-top:3px;}
+  .wrap{padding:14px 14px 0;}
+  .sec{background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:14px; margin-bottom:14px;}
+  .sec h2{margin:0 0 10px; font-size:17px; color:var(--green-d);
+    border-left:5px solid var(--green); padding-left:9px;}
+  ul.shop{list-style:none; margin:0; padding:0;}
+  ul.shop li{display:flex; align-items:flex-start; padding:7px 0; border-bottom:1px dashed var(--line);}
+  ul.shop li:last-child{border-bottom:none;}
+  ul.shop input{margin-top:4px; margin-right:10px; width:20px; height:20px; accent-color:var(--green);}
+  ul.shop label{flex:1;}
+  .amt{color:var(--green-d); font-weight:600;}
+  ol.steps{list-style:none; counter-reset:s; margin:0; padding:0;}
+  ol.steps li{counter-increment:s; display:flex; align-items:flex-start;
+    padding:11px 0; border-bottom:1px solid var(--line);}
+  ol.steps li:last-child{border-bottom:none;}
+  ol.steps li::before{content:counter(s); flex:0 0 28px; height:28px; margin-right:10px;
+    background:var(--green); color:#fff; border-radius:50%; display:flex;
+    align-items:center; justify-content:center; font-weight:700; font-size:15px;}
+  ol.steps li.done{color:var(--sub); text-decoration:line-through; opacity:.65;}
+  ol.steps li.done::before{background:#9e9e9e;}
+  .tip{background:var(--green-l); border:1px solid var(--line); border-radius:12px;
+    padding:12px 14px; font-size:15px; color:var(--txt);}
+  .tip b{color:var(--green-d);}
+  .tip li{margin:5px 0;}
+  .bar{height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin-top:8px;}
+  .bar > i{display:block; height:100%; width:0; background:var(--green); transition:width .3s;}
+  .barlabel{font-size:13px; color:var(--sub); margin-top:5px;}
+  .reset{margin-top:10px; font-size:13px; color:var(--green-d); background:none;
+    border:1px solid var(--green); border-radius:8px; padding:6px 12px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>🦐 粤式腰果西芹炒虾仁</h1>
+  <div class="meta">两人份 · 快手小炒 · 咸鲜回甜带薄芡</div>
+</header>
+
+<div class="wrap">
+
+  <div class="sec">
+    <h2>🛒 采购 / 备料清单</h2>
+    <ul class="shop" id="shop">
+      <li><input type="checkbox"><label><span class="amt">虾仁</span> 350–400g 生重（去壳冷冻，解冻）</label></li>
+      <li><input type="checkbox"><label><span class="amt">腰果</span> 50–80g（焯水去涩）</label></li>
+      <li><input type="checkbox"><label><span class="amt">西芹</span> 2–3 根（去老筋、斜切）</label></li>
+      <li><input type="checkbox"><label><span class="amt">红椒</span> 半个~1 个（菱形片，配色）</label></li>
+      <li><input type="checkbox"><label><span class="amt">生姜 / 蒜</span> 姜 1 小块（片）、蒜 2–3 瓣（片）</label></li>
+      <li><input type="checkbox"><label><span class="amt">鸡蛋</span> 1 个（取蛋清）</label></li>
+      <li><input type="checkbox"><label><span class="amt">小苏打 / 生粉 / 盐糖胡椒 / 姜汁酒 / 油</span> 常备</label></li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h2>👨‍🍳 步骤（点一下打勾）</h2>
+    <ol class="steps" id="steps">
+      <li>小苏打嫩化：虾仁加少许小苏打+清水抓匀，泡约 20 分钟。</li>
+      <li>冲水去碱：倒掉小苏打水，清水反复冲到无碱味，沥干擦干。</li>
+      <li>上浆：盐+白胡椒+姜汁酒抓匀 → 加蛋清抓匀 → 最后加生粉抓上薄浆。</li>
+      <li>腰果焯水：热水焯 1–2 分钟去涩，捞出沥干。</li>
+      <li>炒香底料：锅烧热少油，下姜片、蒜片、红椒片小火炒香（别糊）。</li>
+      <li>滑炒：中大火下西芹翻几下，再下虾仁快炒至变红卷曲（约 1–2 分）。</li>
+      <li>勾芡：淋入勾芡水（盐:糖 3:1 + 胡椒 + 酒 + 清水 + 生粉），翻匀裹汁；下腰果翻几下。</li>
+      <li>出锅明油：临出锅淋几滴明油提亮，装盘趁热吃。</li>
+    </ol>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="barlabel" id="barlabel">进度 0 / 8</div>
+    <button class="reset" onclick="resetSteps()">重置进度</button>
+  </div>
+
+  <div class="sec">
+    <h2>⚠️ 关键提醒</h2>
+    <div class="tip">
+      <ul>
+        <li><b>小苏打后必冲净</b>：泡完多冲几遍到无碱味，否则整盘发苦。</li>
+        <li><b>上浆顺序</b>：盐胡椒酒 → 蛋清 → 生粉（最后锁水）。</li>
+        <li><b>虾仁别过火</b>：变红卷曲就出锅，炒老回缩发柴。</li>
+        <li><b>盐糖 3:1</b>：粤式味型骨架，咸鲜为主、尾韵回甜，不是甜口。</li>
+        <li><b>明油≠多油</b>：出锅几滴尾油提亮挂色即可。</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const KEY = 'yueshi_yaoguo_0804';
+  const steps = document.querySelectorAll('#steps li');
+  const checks = document.querySelectorAll('#shop input');
+  const bar = document.getElementById('bar');
+  const label = document.getElementById('barlabel');
+
+  function save(){
+    const s = [...steps].map(li=>li.classList.contains('done'));
+    const c = [...checks].map(i=>i.checked);
+    localStorage.setItem(KEY, JSON.stringify({s,c}));
+    update();
+  }
+  function update(){
+    const done = [...steps].filter(li=>li.classList.contains('done')).length;
+    bar.style.width = (done/steps.length*100)+'%';
+    label.textContent = `进度 ${done} / ${steps.length}`;
+  }
+  function resetSteps(){
+    steps.forEach(li=>li.classList.remove('done'));
+    checks.forEach(i=>i.checked=false);
+    save();
+  }
+  steps.forEach(li=>li.addEventListener('click',()=>{li.classList.toggle('done');save();}));
+  checks.forEach(i=>i.addEventListener('change',save));
+
+  // 恢复
+  try{
+    const d = JSON.parse(localStorage.getItem(KEY)||'{}');
+    (d.s||[]).forEach((v,i)=>{ if(v&&steps[i]) steps[i].classList.add('done'); });
+    (d.c||[]).forEach((v,i)=>{ if(v&&checks[i]) checks[i].checked=true; });
+  }catch(e){}
+  update();
+</script>
+</body>
+</html>
