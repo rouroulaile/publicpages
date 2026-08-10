@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四个训练日对照卡 · A1 / A2 / B1 / B2</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280;
+    --line:#e5e7eb; --A1:#2563eb; --A2:#0891b2; --B1:#d97706; --B2:#dc2626;
+    --ok:#16a34a; --warn:#d97706;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;padding:16px;max-width:960px;margin:0 auto}
+  h1{font-size:20px;margin-bottom:4px}
+  .sub{color:var(--sub);font-size:13px;margin-bottom:18px}
+  .cycle{background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;
+    padding:10px 14px;font-size:13px;margin-bottom:20px}
+  .cycle b{color:var(--A1)}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:22px}
+  @media(min-width:720px){.grid{grid-template-columns:repeat(4,1fr)}}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;border-top:4px solid var(--c)}
+  .day h2{font-size:17px;padding:10px 12px 6px;display:flex;align-items:center;gap:8px}
+  .tag{font-size:11px;background:var(--c);color:#fff;padding:2px 7px;border-radius:99px;font-weight:600}
+  .day .pos{font-size:12px;color:var(--sub);padding:0 12px 8px}
+  .star{font-size:12px;padding:0 12px 8px;font-weight:600}
+  .memo{font-size:12px;padding:8px 12px 12px;background:#fafafa;border-top:1px dashed var(--line)}
+  .memo span{color:var(--c);font-weight:600}
+
+  .sec-title{font-size:16px;font-weight:700;margin:26px 0 12px;padding-left:10px;border-left:4px solid var(--B1)}
+  table{width:100%;border-collapse:collapse;background:var(--card);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13px}
+  th,td{padding:9px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:#f8fafc;font-size:12px;color:var(--sub);font-weight:600}
+  tbody tr:last-child td{border-bottom:none}
+  .b1-c{color:var(--B1);font-weight:600}
+  .b2-c{color:var(--B2);font-weight:600}
+  .diff{background:#fff7ed}
+  .pill{font-size:11px;padding:1px 6px;border-radius:99px;font-weight:600}
+  .pill.hit{background:#fef3c7;color:#b45309}
+  .pill.keep{background:#fee2e2;color:#b91c1c}
+
+  .callout{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;
+    padding:12px 14px;font-size:13px;margin:14px 0}
+  .callout b{color:var(--B1)}
+
+  .full{margin-top:22px}
+  .full h3{font-size:14px;margin:16px 0 8px;color:var(--ink)}
+  .full .acts{font-size:12.5px;color:#374151;background:var(--card);
+    border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .full .acts b{color:var(--c2)}
+  footer{margin-top:28px;font-size:11px;color:var(--sub);text-align:center}
+</style>
+</head>
+<body>
+
+<h1>四个训练日对照卡</h1>
+<div class="sub">A1 / A2 / B1 / B2 一目了然 · 重点拆解 B1 与 B2 的区别</div>
+
+<div class="cycle">
+  🔁 <b>双周循环</b>：W1 = 周一 <b>B1</b> + 周六 <b>A1</b>　|　W2 = 周一 <b>B2</b> + 周六 <b>A2</b><br>
+  每周一次「拉日」(B1) 是本周<b>唯一冲重量</b>的峰值；推力日 (B2) 故意压成维护量，给拉日让路。
+</div>
+
+<!-- 四张总览卡 -->
+<div class="grid">
+  <div class="day" style="--c:var(--A1)">
+    <h2>A1 <span class="tag">腿</span></h2>
+    <div class="pos">双腿力量与髋伸</div>
+    <div class="star">主角：深蹲 / 臀冲 / RDL</div>
+    <div class="memo"><span>记忆：</span>两条腿一起蹬，下肢主训练日。提踵+侧支撑是自重收尾。</div>
+  </div>
+  <div class="day" style="--c:var(--A2)">
+    <h2>A2 <span class="tag">腿</span></h2>
+    <div class="pos">单腿、横向支撑与制动</div>
+    <div class="star">主角：保加利亚蹲 / 侧弓步</div>
+    <div class="memo"><span>记忆：</span>一条腿练稳定+急停，网球移动专项。和 A1 是「双/单腿」区别。</div>
+  </div>
+  <div class="day" style="--c:var(--B1)">
+    <h2>B1 <span class="tag">拉</span></h2>
+    <div class="pos">拉力与肩胛稳定</div>
+    <div class="star">主角：高位下拉 40→45 / 划船 12kg+</div>
+    <div class="memo"><span>记忆：</span>本周唯一冲重量日。推类(器械推胸)只做 2 组保养。</div>
+  </div>
+  <div class="day" style="--c:var(--B2)">
+    <h2>B2 <span class="tag">推</span></h2>
+    <div class="pos">推力、前锯肌与抗旋</div>
+    <div class="star">主角：上斜卧推 16/18/18</div>
+    <div class="memo"><span>记忆：</span>推日但<b>压成维护量</b>——下拉只 30/35、划船只 10kg，给 B1 让路。</div>
+  </div>
+</div>
+
+<!-- B1 vs B2 专门拆解 -->
+<div class="sec-title">🔍 B1 与 B2 到底差在哪？</div>
+<div class="callout">
+  <b>核心一句话：动作名字几乎一样，区别看「谁在冲重量」。</b><br>
+  B1 是<b>拉日</b>，冲重量的是<b>下拉和划船</b>；B2 是<b>推日</b>，卧推做维护量，反而把<b>下拉和划船压回保养</b>。所以同一个「高位下拉」，在 B1 是 30/35/<b>40</b>、在 B2 只到 30/<b>35</b>，永远不碰 40–45kg。
+</div>
+
+<table>
+  <thead>
+    <tr><th>动作</th><th>B1（拉日·冲重量）</th><th>B2（推日·维护量）</th><th>差在哪</th></tr>
+  </thead>
+  <tbody>
+    <tr class="diff">
+      <td><b>高位下拉</b></td>
+      <td class="b1-c">30 / 35 / <b>40</b> kg</td>
+      <td class="b2-c">30 / <b>35</b> kg（无 40–45）</td>
+      <td><span class="pill hit">B1 冲顶组</span></td>
+    </tr>
+    <tr class="diff">
+      <td><b>划船</b></td>
+      <td class="b1-c">10 / 12 / <b>12</b> kg（冲 12kg+）</td>
+      <td class="b2-c">每边 10kg × 10 × 3（固定）</td>
+      <td><span class="pill hit">B1 冲顶组</span></td>
+    </tr>
+    <tr class="diff">
+      <td><b>推类主角</b></td>
+      <td class="b1-c">器械推胸 25/30（仅 2 组保养）</td>
+      <td class="b2-c">上斜卧推 16/18/18（推力主力）</td>
+      <td><span class="pill keep">B2 才冲推</span></td>
+    </tr>
+    <tr>
+      <td>Pallof 抗旋</td>
+      <td class="b1-c">维持（方案未列顶组）</td>
+      <td class="b2-c">5.7 / 7.9 kg × 12</td>
+      <td>保养量</td>
+    </tr>
+    <tr>
+      <td>肩外旋</td>
+      <td class="b1-c">绳索肩外旋（保养）</td>
+      <td class="b2-c">1.1kg（保养）</td>
+      <td>两侧都保养</td>
+    </tr>
+    <tr>
+      <td>面拉 / 农夫行走</td>
+      <td class="b1-c">有（肩胛稳定）</td>
+      <td class="b2-c">—</td>
+      <td>B1 独有</td>
+    </tr>
+    <tr>
+      <td>Push-up Plus</td>
+      <td class="b1-c">—</td>
+      <td class="b2-c">有（前锯肌）</td>
+      <td>B2 独有</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout" style="border-color:#fca5a5;background:#fef2f2">
+  ⚠️ <b>你 8/10 犯的就是这个混：</b>在 B2 日把下拉做了 40kg、划船 (14+14)kg、卧推直接 20kg——等于把 B1 的强度搬到了 B2。重量本身安全，但破坏了「每周只让拉日冲一次」的设计。<br>
+  ✅ <b>下次 B2 自检一句：</b>「下拉到 35 就停、划船只 10kg、卧推别超 18（20 只偶尔）」。
+</div>
+
+<!-- 完整动作清单 -->
+<div class="full">
+  <div class="sec-title" style="border-color:var(--A1)">📋 每日起完整动作清单</div>
+
+  <h3 style="color:var(--A1)">A1 · 双腿力量与髋伸</h3>
+  <div class="acts" style="--c2:var(--A1)">
+    <b>主训练：</b>高脚杯深蹲 20/22/24/24kg×8　·　RDL 16kg×8–10×3　·　臀冲 25/30/30kg×10　·　提踵 自重×15×3　·　侧支撑 30秒×2/侧
+  </div>
+
+  <h3 style="color:var(--A2)">A2 · 单腿、横向支撑与制动</h3>
+  <div class="acts" style="--c2:var(--A2)">
+    <b>主训练：</b>保加利亚分腿蹲 10/12/14kg×8/侧　·　高脚杯侧弓步 8kg×6–8×3/侧　·　坐姿腿弯举 25/30/30kg　·　坐姿髋外展 准备组20–25kg×12 + 工作组30kg×12×2　·　绳索伐木 5.7kg×8×2/侧　·　单腿平衡加前/侧点地 2×5圈/侧
+  </div>
+
+  <h3 style="color:var(--B1)">B1 · 拉力与肩胛稳定（冲重量日）</h3>
+  <div class="acts" style="--c2:var(--B1)">
+    <b>主训练：</b>绳索肩外旋（保养）　·　胸托划船 10/12/12kg　·　高位下拉 30/35/40kg（冲 40→45）　·　器械推胸 25/30（2组保养）　·　Face Pull　·　农夫行走
+  </div>
+
+  <h3 style="color:var(--B2)">B2 · 推力、前锯肌与抗旋（维护量日）</h3>
+  <div class="acts" style="--c2:var(--B2)">
+    <b>主训练：</b>上斜卧推 16/18/18（20 只偶尔）　·　划船 每边10kg×10×3（固定）　·　高位下拉 30/35（无 40–45）　·　Push-up Plus　·　Pallof 5.7/7.9kg×12　·　肩外旋 1.1kg（保养）
+  </div>
+</div>
+
+<footer>
+  数据来源：训练方案/20260803训练方案.md　·　生成于 2026-08-10　·　配色仅作区分，不代表难度高低
+</footer>
+
+</body>
+</html>
