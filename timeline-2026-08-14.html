@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>今晚菜单 8/14 · 烧椒豆腐牛肉+鳀鱼荷兰豆</title>
+<style>
+  :root{
+    --bg:#f2f3f5; --card:#ffffff; --ink:#1c1c1e; --sub:#6b6f76;
+    --accent:#1f7a4d; --accent2:#e8f3ee; --line:#e6e8eb; --warn:#b8860b; --hot:#c0392b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif;
+    font-size:17px; line-height:1.5; padding-bottom:40px;
+  }
+  .wrap{max-width:540px; margin:0 auto; padding:14px;}
+  header{
+    background:linear-gradient(135deg,#c0392b,#e07b3a);
+    color:#fff; border-radius:16px; padding:18px 18px 16px; margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(192,57,43,.25);
+  }
+  header .emoji{font-size:28px}
+  header h1{margin:6px 0 2px; font-size:20px; font-weight:700}
+  header .meta{font-size:14px; opacity:.92}
+  .pill{display:inline-block; background:rgba(255,255,255,.2); border-radius:20px;
+    padding:2px 10px; font-size:13px; margin:6px 6px 0 0;}
+  .note{background:#fff8e6; border:1px solid #f0dca0; color:#7a5b00;
+    border-radius:12px; padding:10px 12px; font-size:14px; margin-bottom:14px;}
+  .card{background:var(--card); border-radius:14px; padding:14px 15px; margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);}
+  .card h2{margin:0 0 4px; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .card h2 .num{background:var(--accent); color:#fff; width:26px; height:26px; flex:0 0 26px;
+    border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .sets{display:flex; flex-wrap:wrap; gap:7px; margin:8px 0 4px;}
+  .badge{background:var(--accent2); color:var(--accent); border-radius:8px;
+    padding:4px 9px; font-size:13px; font-weight:600;}
+  .desc{color:var(--sub); font-size:14.5px; margin:6px 0 4px;}
+  .cue{font-size:14px; color:var(--ink); margin:3px 0; padding-left:14px; position:relative;}
+  .cue:before{content:""; position:absolute; left:2px; top:9px; width:6px; height:6px;
+    background:var(--accent); border-radius:50%;}
+  .cue.hot:before{background:var(--hot);}
+  label.chk{display:flex; align-items:center; gap:10px; padding:11px 10px; margin:7px 0;
+    background:#fafbfc; border:1px solid var(--line); border-radius:11px; font-size:16px;
+    user-select:none; cursor:pointer; transition:background .15s;}
+  label.chk:active{background:#eef6f1}
+  label.chk input{width:24px; height:24px; flex:0 0 24px; accent-color:var(--accent);}
+  label.chk.done{background:#eaf5ef; border-color:#bfe3cf}
+  label.chk.done span{text-decoration:line-through; color:var(--sub)}
+  .must{color:#c0392b; font-weight:600;}
+  .rest{font-size:13px; color:var(--warn); margin-top:2px; padding-left:4px}
+  .time{font-weight:700; color:var(--accent); font-variant-numeric:tabular-nums;}
+  .record input[type=text],.record textarea{
+    width:100%; border:1px solid var(--line); border-radius:9px; padding:10px;
+    font-size:16px; margin:4px 0 10px; font-family:inherit; resize:vertical;}
+  .record label{font-size:14px; color:var(--sub); display:block}
+  .footer{text-align:center; color:var(--sub); font-size:12.5px; margin-top:6px}
+  .btn{display:block; width:100%; border:none; border-radius:11px; padding:13px;
+    font-size:16px; font-weight:600; margin-top:10px; cursor:pointer;
+    background:var(--accent); color:#fff; font-family:inherit;}
+  .btn.ghost{background:#fff; color:var(--sub); border:1px solid var(--line); margin-top:8px;}
+  .save{font-size:12.5px; color:var(--sub); margin-top:8px; text-align:center; min-height:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="emoji">🌶️🥩🥬</div>
+    <h1>今晚菜单 · 烧椒豆腐牛肉 + 鳀鱼荷兰豆</h1>
+    <div class="meta">2026-08-14 周五 · 19:00 开饭（默认，可调）</div>
+    <div>
+      <span class="pill">晚两人份</span>
+      <span class="pill">微辣烧椒香</span>
+      <span class="pill">网球练习日</span>
+    </div>
+  </header>
+
+  <div class="note">
+    ⚠️ <b>走前确认库存</b>：<b>青辣椒/线椒</b>、<b>鳀鱼罐头</b>、<b>riblappen 牛排</b>、<b>老豆腐</b>、<b>荷兰豆</b> 需采购（亚超/Plus/荷兰超市）；蒜姜葱、生抽、蚝油、小苏打、玉米淀粉、油家里应有。<br>
+    🎾 今日网球发球+步伐练习，营养档贴「发球练习」≈ 2250–2450 kcal／碳水 240–280／蛋白 105–120。
+  </div>
+
+  <!-- 采购清单 -->
+  <div class="card">
+    <h2><span class="num">🛒</span>采购 / 备料清单</h2>
+    <label class="chk"><input type="checkbox"><span><span class="must">riblappen 牛排 500g</span>（荷兰超市常见部位，偏韧带筋，必须嫩化）</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">老豆腐（北豆腐）450g</span></span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">青辣椒 / 线椒 100g</span> ⚠️ 家里一般无，亚超或 Plus 买</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">鳀鱼罐头 1 小罐</span>（ansjovis / anchovy，荷兰超市）</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="must">荷兰豆（雪豆）200g</span></span></label>
+    <label class="chk"><input type="checkbox"><span>蒜 3 瓣、姜 1 小块、葱白 1 段</span></label>
+    <label class="chk"><input type="checkbox"><span>大米（生重 220g 两人份）、生抽、蚝油、糖、盐、白胡椒、玉米淀粉、小苏打、食用油、黑胡椒（常备）</span></label>
+  </div>
+
+  <!-- 时钟表 -->
+  <div class="card">
+    <h2><span class="num">⏰</span>时钟表（开饭 19:00 倒推）</h2>
+    <div class="desc">关键路径＝牛肉嫩化腌 15–20 分，期间同步做烧椒 + 豆腐。双灶：A 炒主菜、B 炒配菜并行。</div>
+
+    <label class="chk"><input type="checkbox"><span><span class="time">18:20</span>淘米下电饭煲（生重 220g 两人份）；riblappen <b>逆纹切条</b>，加腌料（生抽1大勺+酒1小勺+水1小勺+小苏打1/3小勺抓匀 → 玉米淀粉1大勺上浆 → 油1小勺封），腌 15–20 分</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">18:23</span>烧椒预制（干锅不放油、中小火煸青辣椒到皮起皱出焦斑，约 5–6 分）→ 切段；同时老豆腐切厚片</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">18:30</span>豆腐定型：平底锅少油煎两面金黄（更香）或焯水 1 分去豆腥防碎，盛起</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">18:33</span>配菜备料：荷兰豆去两头筋洗净沥干；鳀鱼剪段；蒜切片（主菜蒜姜葱白也切好）</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">18:38</span>【灶眼 A·主菜】热锅冷油大火，牛肉快滑炒到刚变色（约 1 分，<b>过久 riblappen 回韧</b>）先盛出 → 爆香蒜姜葱白 → 烧椒+豆腐轻推 → 调味（生抽蚝油糖盐胡椒）→ 牛肉回锅翻匀出锅</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">18:40</span>【灶眼 B·配菜·并行】锅放 10g 油小火，蒜片+鳀鱼慢煸 1–2 分化开出咸鲜（别大火糊）→ 转大火下荷兰豆快炒 1–2 分翠绿断生，撒黑胡椒出锅</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">18:44</span>两菜 + 米饭装盘就位</span></label>
+    <label class="chk"><input type="checkbox"><span><span class="time">19:00</span>🍽️ 开饭（留 15 分缓冲，新菜不赶）</span></label>
+  </div>
+
+  <!-- 关键别翻车 -->
+  <div class="card">
+    <h2><span class="num">!</span>关键别翻车</h2>
+    <div class="cue hot">riblappen 三件事缺一不可：① 逆纹切（最关键）② 小苏打嫩化 ③ 大火快炒不过火；小苏打约 1/4 小勺/350g 肉，多了发苦发黏，腌后担心碱味下锅前快速冲水沥干</div>
+    <div class="cue">烧椒必须干煸出焦斑才有烟熏味，水煮寡淡</div>
+    <div class="cue">豆腐先煎/焯再炒，否则易碎、出水冲淡味</div>
+    <div class="cue hot">牛肉滑炒 1 分刚变色就盛，riblappen 久炒回韧（难点）</div>
+    <div class="cue hot">鳀鱼极咸，整道配菜别再放盐/酱油——咸度全靠它</div>
+    <div class="cue">鳀鱼必须小火煸化才出酱香；直接大火会焦苦</div>
+    <div class="cue">荷兰豆断生即出锅，炒过头失脆失色、出水</div>
+  </div>
+
+  <!-- 反馈 -->
+  <div class="card record">
+    <h2><span class="num">✓</span>今晚反馈</h2>
+    <label>开饭时间</label>
+    <input type="text" value="19:00" placeholder="实际几点吃上">
+    <label>烧椒豆腐牛肉（首做）</label>
+    <textarea rows="2" placeholder="牛肉嫩不嫩/烧椒香不香/咸淡，riblappen 韧不韧"></textarea>
+    <label>鳀鱼荷兰豆（首做）</label>
+    <textarea rows="2" placeholder="咸鲜够不够/荷兰豆脆不脆"></textarea>
+    <label>下次改进</label>
+    <textarea rows="2" placeholder="哪道要调，怎么调"></textarea>
+    <button id="copyBtn" class="btn">📋 复制今晚反馈</button>
+    <button id="resetBtn" class="btn ghost">↺ 重置本页</button>
+    <div id="saveStatus" class="save"></div>
+  </div>
+
+  <div class="footer">勾选与记录自动存在本机浏览器（同一手机+浏览器有效）；换设备/清缓存会丢，重要反馈用「复制今晚反馈」存到笔记。</div>
+
+</div>
+
+<script>
+(function(){
+  var KEY = 'state:' + document.title;
+  var checks = Array.prototype.slice.call(document.querySelectorAll('label.chk input'));
+  var recInputs = Array.prototype.slice.call(document.querySelectorAll('.record input, .record textarea'));
+  var statusEl = document.getElementById('saveStatus');
+
+  function save(){
+    var data = {
+      checks: checks.map(function(c){ return c.checked; }),
+      rec: recInputs.map(function(i){ return i.value; }),
+      at: Date.now()
+    };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+      var t = new Date(data.at);
+      statusEl.textContent = '已自动保存 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2);
+    } catch(e){
+      statusEl.textContent = '（此环境无法保存，刷新会丢失）';
+    }
+  }
+
+  function sync(i){
+    var lbl = checks[i].closest('label.chk');
+    lbl.classList.toggle('done', checks[i].checked);
+  }
+
+  function restore(){
+    try {
+      var raw = localStorage.getItem(KEY);
+      if(!raw) return;
+      var data = JSON.parse(raw);
+      if(data.checks){
+        data.checks.forEach(function(v, i){ if(checks[i]){ checks[i].checked = v; sync(i); } });
+      }
+      if(data.rec){
+        data.rec.forEach(function(v, i){ if(recInputs[i]){ recInputs[i].value = v; } });
+      }
+      var t = data.at ? new Date(data.at) : null;
+      if(t) statusEl.textContent = '已恢复 ' + t.getHours() + ':' + ('0'+t.getMinutes()).slice(-2) + ' 的进度';
+    } catch(e){}
+  }
+
+  checks.forEach(function(c, i){
+    c.addEventListener('change', function(){ sync(i); save(); });
+  });
+  recInputs.forEach(function(i){ i.addEventListener('input', save); });
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var done = [], undone = [];
+    checks.forEach(function(c){
+      var txt = c.closest('label.chk').querySelector('span').textContent.trim();
+      (c.checked ? done : undone).push(txt);
+    });
+    var lines = [];
+    lines.push(document.querySelector('header h1').textContent.trim() + ' · ' + (recInputs[0] ? recInputs[0].value : ''));
+    lines.push('完成（' + done.length + '/' + checks.length + '）：');
+    done.forEach(function(t){ lines.push('  ✅ ' + t); });
+    if(undone.length){ lines.push('未完成：'); undone.forEach(function(t){ lines.push('  ⬜ ' + t); }); }
+    var extra = [];
+    for(var k=1;k<recInputs.length;k++){
+      var lab = recInputs[k].closest('.record').querySelectorAll('label')[k-1];
+      if(recInputs[k] && recInputs[k].value) extra.push((lab?lab.textContent.trim()+': ':'') + recInputs[k].value);
+    }
+    if(extra.length){ lines.push(''); extra.forEach(function(e){ lines.push(e); }); }
+    copyText(lines.join('\n'));
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if(!confirm('清空本页所有勾选和记录？')) return;
+    checks.forEach(function(c, i){ c.checked = false; sync(i); });
+    recInputs.forEach(function(i){ i.value = i.defaultValue || ''; });
+    try { localStorage.removeItem(KEY); } catch(e){}
+    statusEl.textContent = '已重置';
+  });
+
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(
+        function(){ statusEl.textContent = '已复制到剪贴板，去笔记里粘贴'; },
+        function(){ fallbackCopy(text); }
+      );
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    window.prompt('复制下面内容到你的笔记：', text);
+  }
+
+  restore();
+})();
+</script>
+</body>
+</html>
